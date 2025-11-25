@@ -43,10 +43,13 @@ const Navbar: React.FC = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-dark-900/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}`}>
       <div className="max-w-[90%] xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <div className="flex-shrink-0 text-gold-500 flex items-center gap-2">
-              <Bitcoin size={32} className="text-gold-500" />
-              <span className="font-sans font-bold text-2xl tracking-wider text-white">BODE<span className="text-gold-500">COIN</span></span>
+          <div className="flex items-center gap-3">
+            <div className="flex-shrink-0 text-gold-500 flex items-center gap-1.5 md:gap-2">
+              <Bitcoin size={24} className="text-gold-500 md:w-8 md:h-8" />
+              <span className="font-sans font-bold text-lg md:text-2xl tracking-wider text-white">BODE<span className="text-gold-500">COIN</span></span>
+            </div>
+            <div className="md:hidden">
+              <LanguageSelector />
             </div>
           </div>
           
@@ -69,8 +72,7 @@ const Navbar: React.FC = () => {
             </div>
           </div>
 
-          <div className="-mr-2 flex md:hidden items-center gap-3">
-            <LanguageSelector />
+          <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
