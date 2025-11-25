@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Bitcoin } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 const Navbar: React.FC = () => {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,10 +33,10 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'Sobre', href: '#sobre' },
-    { name: 'Benefícios', href: '#beneficios' },
-    { name: 'Como Funciona', href: '#timeline' },
-    { name: 'Tokenomics', href: '#tokenomics' },
+    { name: t('nav.about'), href: '#sobre' },
+    { name: t('nav.benefits'), href: '#beneficios' },
+    { name: t('nav.howItWorks'), href: '#timeline' },
+    { name: t('nav.tokenomics'), href: '#tokenomics' },
   ];
 
   return (
@@ -48,10 +51,10 @@ const Navbar: React.FC = () => {
           </div>
           
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
                 <a
-                  key={link.name}
+                  key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
                   className="text-gray-300 hover:text-gold-500 transition-colors px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wide cursor-pointer"
@@ -59,8 +62,9 @@ const Navbar: React.FC = () => {
                   {link.name}
                 </a>
               ))}
+              <LanguageSelector />
               <a href="#comprar" onClick={(e) => handleNavClick(e, '#comprar')} className="bg-gold-600 hover:bg-gold-500 text-black px-5 py-2 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer">
-                COMPRAR AGORA
+                {t('nav.buyNow')}
               </a>
             </div>
           </div>
@@ -90,8 +94,11 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <div className="px-3 mt-4">
+              <LanguageSelector />
+            </div>
             <a href="#comprar" onClick={(e) => handleNavClick(e, '#comprar')} className="block text-center bg-gold-600 text-black px-3 py-3 mt-4 rounded-lg font-bold cursor-pointer">
-              COMPRAR AGORA
+              {t('nav.buyNow')}
             </a>
           </div>
         </div>

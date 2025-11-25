@@ -1,56 +1,59 @@
 import React from 'react';
 import { TrendingUp, Wrench, Heart, Shield, Users, Globe } from 'lucide-react';
-
-const benefits = [
-  {
-    icon: <TrendingUp size={32} className="text-gold-500" />,
-    title: "Investimento & Valor",
-    desc: "Um ativo digital que cresce junto com a força da nossa comunidade e expansão da marca."
-  },
-  {
-    icon: <Wrench size={32} className="text-gold-500" />,
-    title: "Troca de Serviços",
-    desc: "Utilize BodesCoin para pagar mecânicos, hospedagem e ingressos em eventos parceiros."
-  },
-  {
-    icon: <Heart size={32} className="text-gold-500" />,
-    title: "Filantropia Real",
-    desc: "Parte das taxas de transação é convertida automaticamente para fundos de ações sociais."
-  }
-];
-
-const differentials = [
-  {
-    icon: <Users size={24} />,
-    title: "Foco na Comunidade",
-    desc: "Governança descentralizada ouvindo a voz da irmandade."
-  },
-  {
-    icon: <Shield size={24} />,
-    title: "Transparência Total",
-    desc: "Contratos auditados e carteiras de caridade públicas."
-  },
-  {
-    icon: <Globe size={24} />,
-    title: "Rede Global",
-    desc: "Conectando motociclistas de diversos capítulos pelo mundo."
-  },
-  {
-    icon: <TrendingUp size={24} />,
-    title: "Potencial de Valorização",
-    desc: "Escassez programada e utilidade real no dia a dia."
-  }
-];
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Features: React.FC = () => {
+  const { t } = useLanguage();
+
+  const benefits = [
+    {
+      icon: <TrendingUp size={32} className="text-gold-500" />,
+      title: t('features.benefit1.title'),
+      desc: t('features.benefit1.desc')
+    },
+    {
+      icon: <Wrench size={32} className="text-gold-500" />,
+      title: t('features.benefit2.title'),
+      desc: t('features.benefit2.desc')
+    },
+    {
+      icon: <Heart size={32} className="text-gold-500" />,
+      title: t('features.benefit3.title'),
+      desc: t('features.benefit3.desc')
+    }
+  ];
+
+  const differentials = [
+    {
+      icon: <Users size={24} />,
+      title: t('features.diff1.title'),
+      desc: t('features.diff1.desc')
+    },
+    {
+      icon: <Shield size={24} />,
+      title: t('features.diff2.title'),
+      desc: t('features.diff2.desc')
+    },
+    {
+      icon: <Globe size={24} />,
+      title: t('features.diff3.title'),
+      desc: t('features.diff3.desc')
+    },
+    {
+      icon: <TrendingUp size={24} />,
+      title: t('features.diff4.title'),
+      desc: t('features.diff4.desc')
+    }
+  ];
+
   return (
     <section id="beneficios" className="py-24 bg-dark-800">
       <div className="max-w-[90%] xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Benefits Grid */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">O Motor da Nossa Economia</h2>
-          <p className="text-gray-400 text-lg">Por que ter BodesCoin na sua carteira digital?</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('features.title')}</h2>
+          <p className="text-gray-400 text-lg">{t('features.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
@@ -70,7 +73,7 @@ const Features: React.FC = () => {
         {/* Differentials Grid (2x2) */}
         <div className="bg-dark-900 rounded-3xl p-8 md:p-16 border border-white/5">
             <div className="text-center mb-12">
-                <h3 className="text-3xl font-bold text-white">Diferenciais do Projeto</h3>
+                <h3 className="text-3xl font-bold text-white">{t('features.differentials.title')}</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                 {differentials.map((item, idx) => (

@@ -1,4 +1,5 @@
 import React from 'react';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,19 +12,21 @@ import AiAssistant from './components/AiAssistant';
 
 function App() {
   return (
-    <div className="font-sans antialiased text-white bg-black selection:bg-gold-500 selection:text-black">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Features />
-        <Timeline />
-        <Tokenomics />
-        <Gallery />
-      </main>
-      <Footer />
-      <AiAssistant />
-    </div>
+    <LanguageProvider>
+      <div className="font-sans antialiased text-white bg-black selection:bg-gold-500 selection:text-black">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Features />
+          <Timeline />
+          <Tokenomics />
+          <Gallery />
+        </main>
+        <Footer />
+        <AiAssistant />
+      </div>
+    </LanguageProvider>
   );
 }
 

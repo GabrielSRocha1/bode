@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, Send, X, Bot } from 'lucide-react';
 import { askBodesAssistant } from '../services/gemini';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const AiAssistant: React.FC = () => {
+  const { t, language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<{role: 'user' | 'assistant', text: string}[]>([
-    { role: 'assistant', text: "Olá! Sou o assistente BodesCoin. Tem dúvidas sobre o projeto ou como comprar?" }
+    { role: 'assistant', text: t('ai.greeting') }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -18,6 +20,13 @@ const AiAssistant: React.FC = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // Atualizar mensagem inicial quando o idioma mudar
+  useEffect(() => {
+    if (messages.length === 1 && messages[0].role === 'assistant') {
+      setMessages([{ role: 'assistant', text: t('ai.greeting') }]);
+    }
+  }, [language]);
 
   const handleSend = async () => {
     if (!input.trim() || loading) return;
@@ -32,7 +41,7 @@ const AiAssistant: React.FC = () => {
       setMessages(prev => [...prev, { role: 'assistant', text: response }]);
     } catch (error) {
         console.error(error)
-      setMessages(prev => [...prev, { role: 'assistant', text: "Erro ao conectar com o servidor." }]);
+      setMessages(prev => [...prev, { role: 'assistant', text: t('ai.error') }]);
     } finally {
       setLoading(false);
     }
@@ -73,7 +82,7 @@ const AiAssistant: React.FC = () => {
             {loading && (
               <div className="flex justify-start">
                  <div className="bg-dark-700 text-gray-400 p-3 rounded-lg rounded-tl-none border border-gray-600 text-xs italic">
-                    Acelerando motor...
+                    {t('ai.loading')}
                  </div>
               </div>
             )}
@@ -86,7 +95,7 @@ const AiAssistant: React.FC = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyPress}
-              placeholder="Digite sua dúvida..."
+              placeholder={t('ai.placeholder')}
               className="flex-1 bg-dark-800 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-gold-500"
             />
             <button 

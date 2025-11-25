@@ -1,40 +1,43 @@
 import React from 'react';
 import { ShoppingCart, Handshake, HeartHandshake, TrendingUp } from 'lucide-react';
-
-const steps = [
-  {
-    id: "01",
-    title: "Adquira a Cripto",
-    desc: "Compre BodesCoin via PancakeSwap ou corretoras parceiras conectando sua carteira BSC.",
-    icon: <ShoppingCart className="text-gold-500" size={24} />
-  },
-  {
-    id: "02",
-    title: "Use na Comunidade",
-    desc: "Utilize seus tokens para pagar serviços de parceiros ou trocar produtos exclusivos.",
-    icon: <Handshake className="text-gold-500" size={24} />
-  },
-  {
-    id: "03",
-    title: "Apoie Projetos",
-    desc: "Cada transação contribui automaticamente para o fundo de caridade do motoclube.",
-    icon: <HeartHandshake className="text-gold-500" size={24} />
-  },
-  {
-    id: "04",
-    title: "Cresça Conosco",
-    desc: "Faça hold (guarde) e veja seu ativo valorizar com o crescimento do ecossistema.",
-    icon: <TrendingUp className="text-gold-500" size={24} />
-  }
-];
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Timeline: React.FC = () => {
+  const { t } = useLanguage();
+
+  const steps = [
+    {
+      id: "01",
+      title: t('timeline.step1.title'),
+      desc: t('timeline.step1.desc'),
+      icon: <ShoppingCart className="text-gold-500" size={24} />
+    },
+    {
+      id: "02",
+      title: t('timeline.step2.title'),
+      desc: t('timeline.step2.desc'),
+      icon: <Handshake className="text-gold-500" size={24} />
+    },
+    {
+      id: "03",
+      title: t('timeline.step3.title'),
+      desc: t('timeline.step3.desc'),
+      icon: <HeartHandshake className="text-gold-500" size={24} />
+    },
+    {
+      id: "04",
+      title: t('timeline.step4.title'),
+      desc: t('timeline.step4.desc'),
+      icon: <TrendingUp className="text-gold-500" size={24} />
+    }
+  ];
+
   return (
     <section id="timeline" className="py-24 bg-dark-900">
       <div className="max-w-[90%] xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">Como Funciona</h2>
-          <p className="text-gray-400 mt-2 text-lg">O ciclo de valor da BodesCoin</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">{t('timeline.title')}</h2>
+          <p className="text-gray-400 mt-2 text-lg">{t('timeline.subtitle')}</p>
         </div>
 
         <div className="relative">

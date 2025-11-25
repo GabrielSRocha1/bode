@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="sobre" className="py-24 bg-dark-900 relative">
       <div className="absolute left-0 top-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
@@ -19,24 +22,16 @@ const About: React.FC = () => {
           </div>
           
           <div className="order-1 md:order-2">
-            <h4 className="text-gold-500 font-bold uppercase tracking-widest text-sm mb-2">Sobre Nós</h4>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Muito Além de uma <br/>Criptomoeda
-            </h2>
+            <h4 className="text-gold-500 font-bold uppercase tracking-widest text-sm mb-2">{t('about.title')}</h4>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('about.heading').replace('<br/>', '<br/>') }} />
             <h3 className="text-xl md:text-2xl text-gray-400 font-medium mb-8">
-              Irmandade, Propósito e Liberdade na Blockchain.
+              {t('about.subheading')}
             </h3>
             
             <div className="space-y-6 text-gray-300 font-body leading-relaxed text-lg text-justify md:text-left max-w-2xl">
-              <p>
-                A <strong>BodesCoin</strong> nasceu dentro do motoclube Bodes do Asfalto para representar a cultura da estrada: lealdade, liberdade e responsabilidade. Não é apenas um ativo digital; é a materialização de um laço que une irmãos em todo o mundo.
-              </p>
-              <p>
-                Criada para fortalecer os laços da irmandade, a BodesCoin utiliza a tecnologia blockchain para gerar oportunidades financeiras e organizar ações de caridade com total transparência e rastreabilidade. Unimos a tradição do colete com a inovação do mercado.
-              </p>
-              <p>
-                Ao fazer parte deste ecossistema, você apoia projetos sociais, movimenta a economia interna de serviços e eventos, e se junta a uma comunidade global. Aqui, não se compra apenas um token; ganha-se pertencimento.
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: t('about.text1') }} />
+              <p dangerouslySetInnerHTML={{ __html: t('about.text2') }} />
+              <p dangerouslySetInnerHTML={{ __html: t('about.text3') }} />
             </div>
           </div>
         </div>
