@@ -69,7 +69,8 @@ const Navbar: React.FC = () => {
             </div>
           </div>
 
-          <div className="-mr-2 flex md:hidden">
+          <div className="-mr-2 flex md:hidden items-center gap-3">
+            <LanguageSelector />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
@@ -94,9 +95,6 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <div className="px-3 mt-4">
-              <LanguageSelector />
-            </div>
             <a href="#comprar" onClick={(e) => handleNavClick(e, '#comprar')} className="block text-center bg-gold-600 text-black px-3 py-3 mt-4 rounded-lg font-bold cursor-pointer">
               {t('nav.buyNow')}
             </a>
