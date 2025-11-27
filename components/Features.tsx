@@ -5,46 +5,46 @@ import { useLanguage } from '../contexts/LanguageContext';
 const Features: React.FC = () => {
   const { t } = useLanguage();
 
-  const benefits = [
-    {
-      icon: <TrendingUp size={32} className="text-gold-500" />,
+const benefits = [
+  {
+    icon: <TrendingUp size={32} className="text-gold-500" />,
       title: t('features.benefit1.title'),
       desc: t('features.benefit1.desc')
-    },
-    {
-      icon: <Wrench size={32} className="text-gold-500" />,
+  },
+  {
+    icon: <Wrench size={32} className="text-gold-500" />,
       title: t('features.benefit2.title'),
       desc: t('features.benefit2.desc')
-    },
-    {
-      icon: <Heart size={32} className="text-gold-500" />,
+  },
+  {
+    icon: <Heart size={32} className="text-gold-500" />,
       title: t('features.benefit3.title'),
       desc: t('features.benefit3.desc')
-    }
-  ];
+  }
+];
 
-  const differentials = [
-    {
-      icon: <Users size={24} />,
+const differentials = [
+  {
+    icon: <Users size={24} />,
       title: t('features.diff1.title'),
       desc: t('features.diff1.desc')
-    },
-    {
-      icon: <Shield size={24} />,
+  },
+  {
+    icon: <Shield size={24} />,
       title: t('features.diff2.title'),
       desc: t('features.diff2.desc')
-    },
-    {
-      icon: <Globe size={24} />,
+  },
+  {
+    icon: <Globe size={24} />,
       title: t('features.diff3.title'),
       desc: t('features.diff3.desc')
-    },
-    {
-      icon: <TrendingUp size={24} />,
+  },
+  {
+    icon: <TrendingUp size={24} />,
       title: t('features.diff4.title'),
       desc: t('features.diff4.desc')
-    }
-  ];
+  }
+];
 
   return (
     <section id="beneficios" className="py-24 bg-dark-800">

@@ -5,10 +5,12 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Features from './components/Features';
 import Timeline from './components/Timeline';
+import Pagamento from './components/Pagamento';
 import Tokenomics from './components/Tokenomics';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import AiAssistant from './components/AiAssistant';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           <About />
           <Features />
           <Timeline />
+          <Pagamento />
           <Tokenomics />
           <Gallery />
         </main>

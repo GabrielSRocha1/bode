@@ -10,6 +10,13 @@ export default {
   'about.title': 'About Us',
   'about.heading': 'Much More Than a Cryptocurrency',
   'about.subheading': 'Brotherhood, Purpose and Freedom on the Blockchain.',
+
+  // Payment Section
+  'payment.heading': 'BodeCoin: The Currency Born with Global Use Card',
+  'payment.subheading': 'Accepted at millions of establishments worldwide, with no IOF and no surprise fees.',
+  'payment.text1': 'Pay for Tolls, Gas Stations and Hotels: Use the card at millions of establishments that accept the flag, in Brazil and abroad. The value is converted instantly, with the convenience you expect.',
+  'payment.text2': 'Immediate Savings: Travel without worrying about exchange bureaucracy. Thanks to our technology, you spend abroad without IOF charges and without those heavy bank fees.',
+  'payment.text3': 'Security and Peace of Mind: Be sure that your brotherhood\'s money is secure on the blockchain, but available for immediate use whenever you need it, whether for a roadside emergency or to pay for event registrations.',
   'about.text1': '<strong>BodesCoin</strong> was born within the Bodes do Asfalto motorcycle club to represent road culture: loyalty, freedom and responsibility. It\'s not just a digital asset; it\'s the materialization of a bond that unites brothers around the world.',
   'about.text2': 'Created to strengthen the bonds of brotherhood, BodesCoin uses blockchain technology to generate financial opportunities and organize charity actions with full transparency and traceability. We unite the tradition of the vest with market innovation.',
   'about.text3': 'By being part of this ecosystem, you support social projects, move the internal economy of services and events, and join a global community. Here, you don\'t just buy a token; you gain belonging.',
@@ -81,4 +88,5 @@ export default {
   'ai.loading': 'Revving engine...',
   'ai.error': 'Error connecting to server.',
 };
+
 

@@ -5,32 +5,32 @@ import { useLanguage } from '../contexts/LanguageContext';
 const Timeline: React.FC = () => {
   const { t } = useLanguage();
 
-  const steps = [
-    {
-      id: "01",
+const steps = [
+  {
+    id: "01",
       title: t('timeline.step1.title'),
       desc: t('timeline.step1.desc'),
-      icon: <ShoppingCart className="text-gold-500" size={24} />
-    },
-    {
-      id: "02",
+    icon: <ShoppingCart className="text-gold-500" size={24} />
+  },
+  {
+    id: "02",
       title: t('timeline.step2.title'),
       desc: t('timeline.step2.desc'),
-      icon: <Handshake className="text-gold-500" size={24} />
-    },
-    {
-      id: "03",
+    icon: <Handshake className="text-gold-500" size={24} />
+  },
+  {
+    id: "03",
       title: t('timeline.step3.title'),
       desc: t('timeline.step3.desc'),
-      icon: <HeartHandshake className="text-gold-500" size={24} />
-    },
-    {
-      id: "04",
+    icon: <HeartHandshake className="text-gold-500" size={24} />
+  },
+  {
+    id: "04",
       title: t('timeline.step4.title'),
       desc: t('timeline.step4.desc'),
-      icon: <TrendingUp className="text-gold-500" size={24} />
-    }
-  ];
+    icon: <TrendingUp className="text-gold-500" size={24} />
+  }
+];
 
   return (
     <section id="timeline" className="py-24 bg-dark-900">

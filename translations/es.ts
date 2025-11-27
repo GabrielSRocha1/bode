@@ -10,6 +10,13 @@ export default {
   'about.title': 'Acerca de Nosotros',
   'about.heading': 'Mucho Más que una Criptomoneda',
   'about.subheading': 'Hermandad, Propósito y Libertad en la Blockchain.',
+
+  // Payment Section
+  'payment.heading': 'BodeCoin: La Moneda que Nace con Tarjeta de Uso Global',
+  'payment.subheading': 'Aceptado en millones de establecimientos en todo el mundo, sin IOF y sin tarifas sorpresa.',
+  'payment.text1': 'Paga el Peaje, la Estación de Servicio y el Hotel: Usa la tarjeta en millones de establecimientos que aceptan la bandera, en Brasil y en el exterior. El valor se convierte al instante, con la practicidad que esperas.',
+  'payment.text2': 'Ahorro Inmediato: Viaja sin preocuparte por la burocracia del cambio. Gracias a nuestra tecnología, gastas en el exterior sin el cobro de IOF y sin esas tarifas bancarias pesadas.',
+  'payment.text3': 'Seguridad y Tranquilidad: Ten la certeza de que el dinero de tu hermandad está seguro en el blockchain, pero disponible para uso inmediato siempre que lo necesites, ya sea para una emergencia en la carretera o para pagar las inscripciones en eventos.',
   'about.text1': '<strong>BodesCoin</strong> nació dentro del motoclub Bodes do Asfalto para representar la cultura del camino: lealtad, libertad y responsabilidad. No es solo un activo digital; es la materialización de un vínculo que une hermanos en todo el mundo.',
   'about.text2': 'Creada para fortalecer los lazos de la hermandad, BodesCoin utiliza la tecnología blockchain para generar oportunidades financieras y organizar acciones de caridad con total transparencia y rastreabilidad. Unimos la tradición del chaleco con la innovación del mercado.',
   'about.text3': 'Al formar parte de este ecosistema, apoyas proyectos sociales, mueves la economía interna de servicios y eventos, y te unes a una comunidad global. Aquí, no solo compras un token; ganas pertenencia.',
@@ -81,4 +88,5 @@ export default {
   'ai.loading': 'Acelerando motor...',
   'ai.error': 'Error al conectar con el servidor.',
 };
+
 

@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
       <div 
         className="hidden sm:block absolute inset-0 bg-cover bg-center bg-no-repeat z-0 min-h-[100vh]"
         style={{ 
-          backgroundImage: 'url("/bodes.png")',
+          backgroundImage: 'url("/bodes.png")', 
         }}
       >
         {/* Very light overlay to ensure Navbar visibility, but keeping image pure */}
