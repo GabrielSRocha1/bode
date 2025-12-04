@@ -7,12 +7,12 @@ const images = [
     alt: "Estrada aberta"
   },
   {
-    src: "https://parana-centro.nyc3.cdn.digitaloceanspaces.com/articles/1200x560/image_62bc8d170b64b6.89162865.webp",
+    src: "images (1) bodes 1.jpg",
     label: "Irmandade",
     alt: "Grupo de motos"
   },
   {
-    src: "bodes2.png", // Using a tech-ish abstract or futuristic bike part
+    src: "site (1).png", // Using a tech-ish abstract or futuristic bike part
     label: "Futuro",
     alt: "Tecnologia"
   }
