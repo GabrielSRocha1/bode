@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <div id="comprar" className="relative w-full overflow-hidden bg-dark-900 sm:min-h-screen">
       {/* Mobile: Container que acompanha o tamanho da imagem */}
@@ -8,11 +11,20 @@ const Hero: React.FC = () => {
         <div 
           className="absolute inset-0 bg-contain bg-center bg-no-repeat z-0"
           style={{ 
-            backgroundImage: 'url("/bodes.png")',
+            backgroundImage: 'url("/site (1).png")',
           }}
         >
           {/* Very light overlay to ensure Navbar visibility, but keeping image pure */}
           <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+        {/* Text Overlay Mobile */}
+        <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 text-center">
+            {t('hero.title')}
+          </h1>
+          <p className="text-lg md:text-xl text-white italic text-center">
+            {t('hero.subtitle')}
+          </p>
         </div>
       </div>
       
@@ -20,11 +32,23 @@ const Hero: React.FC = () => {
       <div 
         className="hidden sm:block absolute inset-0 bg-cover bg-center bg-no-repeat z-0 min-h-[100vh]"
         style={{ 
-          backgroundImage: 'url("/bodes.png")', 
+          backgroundImage: 'url("/site (1).png")', 
         }}
       >
         {/* Very light overlay to ensure Navbar visibility, but keeping image pure */}
         <div className="absolute inset-0 bg-black/15 md:bg-black/20"></div>
+      </div>
+      
+      {/* Text Overlay Desktop */}
+      <div className="hidden sm:flex absolute inset-0 z-10 flex-col justify-start items-end pt-32 md:pt-40 lg:pt-48 pr-8 md:pr-16 lg:pr-24">
+        <div className="text-right">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 drop-shadow-2xl">
+            {t('hero.title')}
+          </h1>
+          <p className="text-xl md:text-2xl lg:text-3xl text-white italic drop-shadow-lg">
+            {t('hero.subtitle')}
+          </p>
+        </div>
       </div>
 
     </div>

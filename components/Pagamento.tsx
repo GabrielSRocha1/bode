@@ -13,7 +13,7 @@ const About: React.FC = () => {
           <div className="order-2 md:order-1 flex justify-center md:justify-end">
              <div className="relative w-full max-w-xs md:max-w-md"> 
                 <img 
-                  src="Img-site.png" 
+                  src="Img-site (1).png" 
                   alt="Brotherhood on the road" 
                   className="rounded-lg shadow-2xl w-full h-auto object-contain max-h-[600px]"
                 />

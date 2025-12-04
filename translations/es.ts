@@ -6,6 +6,10 @@ export default {
   'nav.tokenomics': 'Tokenomics',
   'nav.buyNow': 'COMPRAR AHORA',
 
+  // Hero Section
+  'hero.title': 'BODE COIN',
+  'hero.subtitle': 'La Cripto Oficial de los Motociclistas',
+
   // About Section
   'about.title': 'Acerca de Nosotros',
   'about.heading': 'Mucho Más que una Criptomoneda',
