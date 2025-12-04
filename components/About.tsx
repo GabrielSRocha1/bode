@@ -12,12 +12,12 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-stretch">
           <div className="order-2 md:order-1 flex justify-center md:justify-start">
              <div className="relative w-full max-w-md h-full">
-                <div className="absolute -inset-4 border-2 border-gold-500/20 rounded-xl translate-x-4 translate-y-4 z-0"></div>
+                <div className="hidden md:block absolute -inset-4 border-2 border-gold-500/20 rounded-xl translate-x-4 translate-y-4 z-0"></div>
                 <div className="relative z-10 rounded-lg shadow-2xl overflow-hidden h-full w-full">
                   <img 
                     src="1085272-img_1322_29.07.17 bodes 02.webp" 
                     alt="Brotherhood on the road" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover mx-auto"
                     style={{ objectPosition: '50% 45%' }}
                   />
                 </div>
