@@ -15,20 +15,20 @@ import AiAssistant from './components/AiAssistant';
 function App() {
   return (
     <LanguageProvider>
-      <div className="font-sans antialiased text-white bg-black selection:bg-gold-500 selection:text-black">
-        <Navbar />
-        <main>
-          <Hero />
-          <About />
-          <Features />
-          <Timeline />
+    <div className="font-sans antialiased text-white bg-black selection:bg-gold-500 selection:text-black">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Features />
+        <Timeline />
           <Pagamento />
-          <Tokenomics />
-          <Gallery />
-        </main>
-        <Footer />
-        <AiAssistant />
-      </div>
+        <Tokenomics />
+        <Gallery />
+      </main>
+      <Footer />
+      <AiAssistant />
+    </div>
     </LanguageProvider>
   );
 }

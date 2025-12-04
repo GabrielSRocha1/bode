@@ -35,6 +35,77 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
+        
+        {/* Download Section */}
+        <div className="mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Google Play Section */}
+            <div className="bg-white rounded-xl p-6 shadow-xl">
+              <div className="flex items-center justify-center gap-4">
+                <div className="flex flex-col items-center">
+                  <img src="/google.png" alt="Google Play" className="h-16 w-auto object-contain" />
+                </div>
+                
+                <a 
+                  href="https://okx.com/pt-br/join/69600528" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center hover:opacity-80 transition-opacity"
+                >
+                  <img src="/cartão-G.png" alt="Cartão" className="h-16 w-auto object-contain" />
+                </a>
+                
+                <a 
+                  href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://play.google.com/store/apps/details%3Fid%3Dcom.okx.wallet%26referrer%3Dutm_source%253Dgoogle%2526utm_medium%253Dorganic%2526utm_term%253Dokx%2Bwallet%26pcampaignid%3DAPPU_1_WL4wabi1LPHT1sQP7ePYUA&ved=2ahUKEwi4wdWjwKKRAxXxqZUCHe0xFgoQ8oQBegQIIRAB&usg=AOvVaw2oGUOscr9PwGQtUishTeMJ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center hover:opacity-80 transition-opacity"
+                >
+                  <img src="/wallet-G.png" alt="Wallet" className="h-16 w-auto object-contain" />
+                </a>
+              </div>
+            </div>
+
+            {/* App Store Section */}
+            <div className="bg-white rounded-xl p-6 shadow-xl">
+              <div className="flex items-center justify-center gap-4">
+                <div className="flex flex-col items-center">
+                  <img src="/google-A.png" alt="App Store" className="h-16 w-auto object-contain" />
+                </div>
+                
+                <a 
+                  href="https://apps.apple.com/us/app/okx-buy-bitcoin-btc-crypto/id1327268470" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center hover:opacity-80 transition-opacity"
+                >
+                  <img src="/cartão-A.png" alt="Cartão" className="h-16 w-auto object-contain" />
+                </a>
+                
+                <a 
+                  href="https://apps.apple.com/us/app/okx-wallet-crypto-web3/id6743309484" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center hover:opacity-80 transition-opacity"
+                >
+                  <img src="/wallet-A.png" alt="Wallet" className="h-16 w-auto object-contain" />
+                </a>
+              </div>
+            </div>
+
+            {/* YouTube Section */}
+            <div className="bg-white rounded-xl p-6 shadow-xl flex items-center justify-center">
+              <a 
+                href="https://www.youtube.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex flex-col items-center hover:opacity-80 transition-opacity"
+              >
+                <img src="/Frame 10.png" alt="YouTube" className="h-16 w-auto object-contain" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
