@@ -109,7 +109,7 @@ const About: React.FC = () => {
                 className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer relative group"
                 title={copied ? 'Link copiado!' : 'Clique para copiar o link'}
               >
-                <img src="/google-2 1.png" alt="Google" className="h-24 w-auto object-contain" />
+                <img src="WhatsApp Image 2025-12-05 at 12.10.49.jpeg" alt="Google" className="h-24 w-auto object-contain" />
                 {copied && (
                   <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gold-500 text-black text-xs font-bold px-2 py-1 rounded whitespace-nowrap">
                     Link copiado!
