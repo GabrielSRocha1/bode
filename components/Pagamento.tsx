@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
   const { t } = useLanguage();
+  const [copied, setCopied] = useState(false);
+  
+  const linkToCopy = '4t7EWkBU3HAvcFTQRqzHoZ1g3GCJ3BpxwGLf876fLLjV';
+  
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(linkToCopy);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Erro ao copiar link:', err);
+    }
+  };
   
   return (
     <section id="sobre" className="py-24 bg-dark-900 relative">
@@ -91,14 +104,18 @@ const About: React.FC = () => {
 
             {/* YouTube Section */}
             <div className="flex items-center justify-center gap-0 flex-shrink-0">
-              <a 
-                href="4t7EWkBU3HAvcFTQRqzHoZ1g3GCJ3BpxwGLf876fLLjV" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex flex-col items-center hover:opacity-80 transition-opacity"
+              <button
+                onClick={handleCopyLink}
+                className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer relative group"
+                title={copied ? 'Link copiado!' : 'Clique para copiar o link'}
               >
                 <img src="/google-2 1.png" alt="Google" className="h-24 w-auto object-contain" />
-              </a>
+                {copied && (
+                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gold-500 text-black text-xs font-bold px-2 py-1 rounded whitespace-nowrap">
+                    Link copiado!
+                  </span>
+                )}
+              </button>
               <a 
                 href="https://www.youtube.com" 
                 target="_blank" 
