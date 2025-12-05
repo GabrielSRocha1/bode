@@ -94,32 +94,38 @@
   <script type="module">
     import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
 
-    const widget = await Chatbox.initBubble({
-      agentId: 'cmipc6k700zf41i1osd87c2pn',
-      //[optional] If provided will create a contact for the user and link it to the conversation
-      contact: {
-        firstName: 'John',
-        lastName: 'Doe',
-        email: 'customer@email.com',
-        phoneNumber: '+33612345644',
-      },
-       
-      //[optional] Override initial messages
-      interface: {
-        initialMessages: [
-          'Hello, how are you doing today?',
-          'How can I help you ?',
-        ],
-      },
-      
-      //[optional] Provided context will be Appended to the Agent system prompt
-      context: "The user lives in the city of São Paulo and is interested in learning more details about the online consulting service.",
-    });
+    (async () => {
+      try {
+        const widget = await Chatbox.initBubble({
+          agentId: 'cmipc6k700zf41i1osd87c2pn',
+          //[optional] If provided will create a contact for the user and link it to the conversation
+          contact: {
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'customer@email.com',
+            phoneNumber: '+33612345644',
+          },
+           
+          //[optional] Override initial messages
+          interface: {
+            initialMessages: [
+              'Hello, how are you doing today?',
+              'How can I help you ?',
+            ],
+          },
+          
+          //[optional] Provided context will be Appended to the Agent system prompt
+          context: "The user lives in the city of São Paulo and is interested in learning more details about the online consulting service.",
+        });
 
-    // Optional Controllers:
-    widget.open();
-    widget.close();
-    widget.toggle();
+        // Optional Controllers:
+        widget.open();
+        widget.close();
+        widget.toggle();
+      } catch (error) {
+        console.error('Error initializing Chatvolt:', error);
+      }
+    })();
   </script>
 </body>
 </html>

@@ -32,7 +32,7 @@ const countryToLanguage: Record<string, Language> = {
   'MY': 'en', 'PH': 'en', 'IN': 'en', 'PK': 'en', 'BD': 'en', 'NG': 'en', 'KE': 'en', 'GH': 'en',
   'TZ': 'en', 'UG': 'en', 'ZW': 'en', 'ZM': 'en', 'MW': 'en', 'RW': 'en', 'ET': 'en', 'SL': 'en',
   'LR': 'en', 'GM': 'en', 'BS': 'en', 'BB': 'en', 'JM': 'en', 'TT': 'en', 'GY': 'en', 'BZ': 'en',
-  'AG': 'en', 'BS': 'en', 'DM': 'en', 'GD': 'en', 'KN': 'en', 'LC': 'en', 'VC': 'en', 'SC': 'en',
+  'AG': 'en', 'DM': 'en', 'GD': 'en', 'KN': 'en', 'LC': 'en', 'VC': 'en', 'SC': 'en',
   'MU': 'en', 'FJ': 'en', 'PG': 'en', 'SB': 'en', 'VU': 'en', 'WS': 'en', 'TO': 'en', 'KI': 'en',
   'TV': 'en', 'NR': 'en', 'PW': 'en', 'FM': 'en', 'MH': 'en',
 };
