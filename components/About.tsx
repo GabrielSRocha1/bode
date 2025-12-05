@@ -14,12 +14,12 @@ const About: React.FC = () => {
              <div className="relative w-full max-w-md h-full">
                 <div className="hidden md:block absolute -inset-4 border-2 border-gold-500/20 rounded-xl translate-x-4 translate-y-4 z-0"></div>
                 <div className="relative z-10 rounded-lg shadow-2xl overflow-hidden h-full w-full">
-                  <img 
+                <img 
                     src="1085272-img_1322_29.07.17 bodes 02.webp" 
-                    alt="Brotherhood on the road" 
+                  alt="Brotherhood on the road" 
                     className="w-full h-full object-cover mx-auto"
                     style={{ objectPosition: '50% 45%' }}
-                  />
+                />
                 </div>
              </div>
           </div>

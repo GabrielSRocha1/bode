@@ -51,7 +51,6 @@ const Footer: React.FC = () => {
               <li><a href="#beneficios" className="hover:text-gold-500 transition-colors">{t('footer.benefits')}</a></li>
               <li><a href="#timeline" className="hover:text-gold-500 transition-colors">{t('footer.roadmap')}</a></li>
               <li><a href="#tokenomics" className="hover:text-gold-500 transition-colors">{t('footer.tokenomics')}</a></li>
-              <li><a href="#" className="hover:text-gold-500 transition-colors">{t('footer.whitepaper')}</a></li>
             </ul>
           </div>
 
@@ -60,7 +59,6 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-gray-400">
               <li><a href="#" className="hover:text-gold-500 transition-colors">{t('footer.terms')}</a></li>
               <li><a href="#" className="hover:text-gold-500 transition-colors">{t('footer.privacy')}</a></li>
-              <li><a href="#" className="hover:text-gold-500 transition-colors">{t('footer.disclaimer')}</a></li>
               <li><a href="#" className="hover:text-gold-500 transition-colors">{t('footer.contact')}</a></li>
             </ul>
           </div>

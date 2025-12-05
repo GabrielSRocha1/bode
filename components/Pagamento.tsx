@@ -21,14 +21,14 @@ const About: React.FC = () => {
           </div>
           
           <div className="order-1 md:order-2">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               {t('payment.heading')}
             </h2>
-            <h3 className="text-xl md:text-2xl text-gray-400 font-medium mb-8">
+            <h3 className="text-lg sm:text-xl md:text-2xl text-gray-400 font-medium mb-6 sm:mb-8">
               {t('payment.subheading')}
             </h3>
             
-            <div className="space-y-8 text-gray-300 font-body leading-relaxed text-lg text-justify md:text-left max-w-2xl">
+            <div className="space-y-4 sm:space-y-6 md:space-y-8 text-gray-300 font-body leading-relaxed text-sm sm:text-base md:text-lg text-justify md:text-left max-w-2xl">
               <p>{t('payment.text1')}</p>
               <p>{t('payment.text2')}</p>
               <p>{t('payment.text3')}</p>
@@ -38,7 +38,7 @@ const About: React.FC = () => {
         
         {/* Download Section */}
         <div className="mt-16">
-          <div className="flex flex-nowrap items-center justify-center gap-4 max-w-7xl mx-auto overflow-x-auto">
+          <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap items-center justify-center gap-6 md:gap-4 max-w-7xl mx-auto">
             {/* Google Play Section */}
             <div className="flex items-center justify-center gap-0 flex-shrink-0">
               <div className="flex flex-col items-center">

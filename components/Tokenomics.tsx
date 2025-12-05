@@ -21,7 +21,7 @@ const Tokenomics: React.FC = () => {
           {/* Chart Side */}
           <div className="w-full md:w-1/2 h-[400px] md:h-[500px] relative">
             <h3 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-bold text-white text-center">
-              100M<br/><span className="text-sm text-gray-400 font-normal">BODE</span>
+              10 BI<br/><span className="text-sm text-gray-400 font-normal">BODE</span>
             </h3>
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -55,7 +55,7 @@ const Tokenomics: React.FC = () => {
               <div className="bg-dark-900 p-8 rounded-lg border-l-4 border-gold-500 shadow-xl">
                 <div className="flex justify-between items-center mb-4">
                     <span className="text-gray-400 text-lg">{t('tokenomics.totalSupply')}</span>
-                    <span className="text-white font-bold text-2xl">100.000.000 BODE</span>
+                    <span className="text-white font-bold text-2xl">10.000.000.000 BODE</span>
                 </div>
                 <div className="flex justify-between items-center mb-4">
                     <span className="text-gray-400 text-lg">{t('tokenomics.network')}</span>

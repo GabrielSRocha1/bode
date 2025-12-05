@@ -18,13 +18,15 @@ const Hero: React.FC = () => {
           <div className="absolute inset-0 bg-black/20"></div>
         </div>
         {/* Text Overlay Mobile */}
-        <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 text-center">
-            {t('hero.title')}
-          </h1>
-          <p className="text-lg md:text-xl text-white italic text-center">
-            {t('hero.subtitle')}
-          </p>
+        <div className="absolute inset-0 z-10 flex flex-col justify-start items-end pt-32 pr-4">
+          <div className="text-right">
+            <h1 className="text-lg sm:text-xl font-bold text-white mb-2 drop-shadow-2xl leading-tight">
+              {t('hero.title')}
+            </h1>
+            <p className="text-xs sm:text-sm text-white italic drop-shadow-lg leading-tight">
+              {t('hero.subtitle')}
+            </p>
+          </div>
         </div>
       </div>
       
