@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-gray-400">
               <li><a href="#" className="hover:text-gold-500 transition-colors">{t('footer.terms')}</a></li>
               <li><a href="#" className="hover:text-gold-500 transition-colors">{t('footer.privacy')}</a></li>
-              <li><a href="#" className="hover:text-gold-500 transition-colors">{t('footer.contact')}</a></li>
+              <li><a href="https://chatvolt.ai/@bodecoin" target="_blank" rel="noopener noreferrer" className="hover:text-gold-500 transition-colors">{t('footer.contact')}</a></li>
             </ul>
           </div>
         </div>
