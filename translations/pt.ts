@@ -4,7 +4,7 @@ export default {
   'nav.benefits': 'Benefícios',
   'nav.howItWorks': 'Como Funciona',
   'nav.tokenomics': 'Tokenomics',
-  'nav.buyNow': 'COMPRAR AGORA',
+  'nav.buyNow': 'EMPRESAS PARCEIRAS',
 
   // Hero Section
   'hero.title': 'BODE COIN',
@@ -21,7 +21,7 @@ export default {
   'payment.text1': 'Pague o Pedágio, o Posto e o Hotel: Use o cartão em milhões de estabelecimentos que aceitam a bandeira, no Brasil e no exterior. O valor é convertido na hora, com a praticidade que você espera.',
   'payment.text2': 'Economia Imediata: Viaje sem se preocupar com a burocracia do câmbio. Graças à nossa tecnologia, você gasta no exterior sem a cobrança de IOF e sem aquelas taxas bancárias pesadas.',
   'payment.text3': 'Segurança e Tranquilidade: Tenha a certeza de que o dinheiro da sua irmandade está seguro no blockchain, mas disponível para uso imediato sempre que você precisar, seja para uma emergência na estrada ou para pagar as inscrições em eventos.',
-  'about.text1': 'A <strong>BodesCoin</strong> nasceu dentro do motoclube Bodes do Asfalto para representar a cultura da estrada: lealdade, liberdade e responsabilidade. Não é apenas um ativo digital; é a materialização de um laço que une irmãos em todo o mundo.',
+  'about.text1': 'Nasceu do coração de motociclistas para representar a cultura da estrada: Lealdade, Liberdade e Responsabilidade. Não é apenas um ativo digital; é a materialização de um laço que une motociclistas em todo o mundo.',
   'about.text2': 'Criada para fortalecer os laços da irmandade, a BodesCoin utiliza a tecnologia blockchain para gerar oportunidades financeiras e organizar ações de caridade com total transparência e rastreabilidade. Unimos a tradição do colete com a inovação do mercado.',
   'about.text3': 'Ao fazer parte deste ecossistema, você apoia projetos sociais, movimenta a economia interna de serviços e eventos, e se junta a uma comunidade global. Aqui, não se compra apenas um token; ganha-se pertencimento.',
 

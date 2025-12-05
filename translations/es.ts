@@ -4,7 +4,7 @@ export default {
   'nav.benefits': 'Beneficios',
   'nav.howItWorks': 'Cómo Funciona',
   'nav.tokenomics': 'Tokenomics',
-  'nav.buyNow': 'COMPRAR AHORA',
+  'nav.buyNow': 'EMPRESAS PARCEIRAS',
 
   // Hero Section
   'hero.title': 'BODE COIN',
