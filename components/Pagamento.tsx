@@ -91,9 +91,14 @@ const About: React.FC = () => {
 
             {/* YouTube Section */}
             <div className="flex items-center justify-center gap-0 flex-shrink-0">
-              <div className="flex flex-col items-center">
+              <a 
+                href="4t7EWkBU3HAvcFTQRqzHoZ1g3GCJ3BpxwGLf876fLLjV" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex flex-col items-center hover:opacity-80 transition-opacity"
+              >
                 <img src="/google-2 1.png" alt="Google" className="h-24 w-auto object-contain" />
-              </div>
+              </a>
               <a 
                 href="https://www.youtube.com" 
                 target="_blank" 
