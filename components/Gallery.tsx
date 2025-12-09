@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 const images = [
   {
@@ -19,6 +19,16 @@ const images = [
 ];
 
 const Gallery: React.FC = () => {
+  const handleScrollToPayment = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.getElementById('pagamento-imagens');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      window.location.hash = '#pagamento-imagens';
+    }
+  }, []);
+
   return (
     <section className="py-0">
       <div className="grid grid-cols-1 md:grid-cols-3 h-[500px]">
@@ -41,7 +51,8 @@ const Gallery: React.FC = () => {
       <div className="py-8 text-center">
         <a
           href="#pagamento-imagens"
-          className="inline-block bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-lg font-extrabold text-lg transition-all transform hover:scale-105 cursor-pointer"
+          onClick={handleScrollToPayment}
+          className="inline-block bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-extrabold text-xl sm:text-2xl transition-all transform hover:scale-105 cursor-pointer"
         >
           Comprar Agora
         </a>

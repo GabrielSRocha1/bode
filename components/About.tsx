@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
   const { t } = useLanguage();
+  
+  const handleScrollToPayment = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.getElementById('pagamento-imagens');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      window.location.hash = '#pagamento-imagens';
+    }
+  }, []);
   
   return (
     <section id="sobre" className="py-24 bg-dark-900 relative">
@@ -12,7 +22,8 @@ const About: React.FC = () => {
         <div className="flex justify-center mb-10">
           <a
             href="#pagamento-imagens"
-            className="inline-block bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-lg font-extrabold text-lg transition-all transform hover:scale-105 cursor-pointer"
+            onClick={handleScrollToPayment}
+            className="inline-block bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-extrabold text-xl sm:text-2xl transition-all transform hover:scale-105 cursor-pointer"
           >
             Comprar Agora
           </a>
