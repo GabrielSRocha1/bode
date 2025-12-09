@@ -98,20 +98,13 @@
       try {
         const widget = await Chatbox.initBubble({
           agentId: 'cmipc6k700zf41i1osd87c2pn',
+
           //[optional] If provided will create a contact for the user and link it to the conversation
           contact: {
             firstName: 'John',
             lastName: 'Doe',
             email: 'customer@email.com',
             phoneNumber: '+33612345644',
-          },
-           
-          //[optional] Override initial messages
-          interface: {
-            initialMessages: [
-              'Hello, how are you doing today?',
-              'How can I help you ?',
-            ],
           },
           
           //[optional] Provided context will be Appended to the Agent system prompt
