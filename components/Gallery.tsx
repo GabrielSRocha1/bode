@@ -37,6 +37,15 @@ const Gallery: React.FC = () => {
           </div>
         ))}
       </div>
+
+      <div className="py-8 text-center">
+        <a
+          href="#pagamento"
+          className="inline-block bg-gold-600 hover:bg-gold-500 text-black px-5 py-2 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer"
+        >
+          Comprar Agora
+        </a>
+      </div>
     </section>
   );
 };

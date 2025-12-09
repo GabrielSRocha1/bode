@@ -66,7 +66,13 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
               <LanguageSelector />
-              <a href="#comprar" onClick={(e) => handleNavClick(e, '#comprar')} className="bg-gold-600 hover:bg-gold-500 text-black px-5 py-2 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer">
+              <a
+                href="https://parceiros.bodecoin.digital/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="bg-gold-600 hover:bg-gold-500 text-black px-5 py-2 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer"
+              >
                 {t('nav.buyNow')}
               </a>
             </div>
@@ -97,7 +103,13 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <a href="#comprar" onClick={(e) => handleNavClick(e, '#comprar')} className="block text-center bg-gold-600 text-black px-3 py-3 mt-4 rounded-lg font-bold cursor-pointer">
+            <a
+              href="https://parceiros.bodecoin.digital/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="block text-center bg-gold-600 text-black px-3 py-3 mt-4 rounded-lg font-bold cursor-pointer"
+            >
               {t('nav.buyNow')}
             </a>
           </div>

@@ -36,6 +36,15 @@ const About: React.FC = () => {
               <p dangerouslySetInnerHTML={{ __html: t('about.text2') }} />
               <p dangerouslySetInnerHTML={{ __html: t('about.text3') }} />
             </div>
+
+            <div className="mt-10">
+              <a
+                href="#pagamento"
+                className="inline-block bg-gold-600 hover:bg-gold-500 text-black px-5 py-2 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer"
+              >
+                Comprar Agora
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -95,7 +95,10 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
+
       </div>
+      {/* Anchor target for Comprar Agora */}
+      <div id="pagamento" className="absolute -top-24"></div>
     </section>
   );
 };
