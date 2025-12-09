@@ -40,8 +40,8 @@ const Gallery: React.FC = () => {
 
       <div className="py-8 text-center">
         <a
-          href="#pagamento"
-          className="inline-block bg-gold-600 hover:bg-gold-500 text-black px-5 py-2 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer"
+          href="#pagamento-imagens"
+          className="inline-block bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-lg font-extrabold text-lg transition-all transform hover:scale-105 cursor-pointer"
         >
           Comprar Agora
         </a>

@@ -70,6 +70,15 @@ const differentials = [
           ))}
         </div>
 
+        <div className="mb-24 flex justify-center">
+          <a
+            href="#pagamento-imagens"
+            className="inline-block bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-lg font-extrabold text-lg transition-all transform hover:scale-105 cursor-pointer"
+          >
+            Comprar Agora
+          </a>
+        </div>
+
         {/* Differentials Grid (2x2) */}
         <div className="bg-dark-900 rounded-3xl p-8 md:p-16 border border-white/5">
             <div className="text-center mb-12">

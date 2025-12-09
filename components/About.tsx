@@ -9,6 +9,15 @@ const About: React.FC = () => {
       <div className="absolute left-0 top-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
       
       <div className="max-w-[90%] xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center mb-10">
+          <a
+            href="#pagamento-imagens"
+            className="inline-block bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-lg font-extrabold text-lg transition-all transform hover:scale-105 cursor-pointer"
+          >
+            Comprar Agora
+          </a>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-stretch">
           <div className="order-2 md:order-1 flex justify-center md:justify-start">
              <div className="relative w-full max-w-md h-full">
@@ -35,15 +44,6 @@ const About: React.FC = () => {
               <p dangerouslySetInnerHTML={{ __html: t('about.text1') }} />
               <p dangerouslySetInnerHTML={{ __html: t('about.text2') }} />
               <p dangerouslySetInnerHTML={{ __html: t('about.text3') }} />
-            </div>
-
-            <div className="mt-10">
-              <a
-                href="#pagamento"
-                className="inline-block bg-gold-600 hover:bg-gold-500 text-black px-5 py-2 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer"
-              >
-                Comprar Agora
-              </a>
             </div>
           </div>
         </div>

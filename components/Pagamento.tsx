@@ -50,7 +50,7 @@ const About: React.FC = () => {
         </div>
         
         {/* Download Section */}
-        <div className="mt-16">
+        <div id="pagamento-imagens" className="mt-16">
           <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center mb-6 sm:mb-8 md:mb-12">
             Como Comprar BODECOIN
           </h3>
