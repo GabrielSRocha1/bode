@@ -16,7 +16,7 @@ export default {
   'about.subheading': 'Irmandade, Propósito e Liberdade na Blockchain.',
 
   // Payment Section
-  'payment.heading': 'BodeCoin: A Moeda que Nasce com Cartão de uso Global',
+  'payment.heading': 'Nós da BodeCoin Usamos a Estrutura do Cartão Global da OKX',
   'payment.subheading': 'Aceito em milhões de estabelecimentos no mundo todo, sem IOF e sem taxas surpresa.',
   'payment.text1': 'Pague o Pedágio, o Posto e o Hotel: Use o cartão em milhões de estabelecimentos que aceitam a bandeira, no Brasil e no exterior. O valor é convertido na hora, com a praticidade que você espera.',
   'payment.text2': 'Economia Imediata: Viaje sem se preocupar com a burocracia do câmbio. Graças à nossa tecnologia, você gasta no exterior sem a cobrança de IOF e sem aquelas taxas bancárias pesadas.',
