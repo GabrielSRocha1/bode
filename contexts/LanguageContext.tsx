@@ -40,7 +40,7 @@ const countryToLanguage: Record<string, Language> = {
 // Detectar idioma baseado na localização
 const detectLanguage = (): Language => {
   // Primeiro, verificar se há um idioma salvo no localStorage
-  const savedLanguage = localStorage.getItem('bodescoin-language') as Language;
+  const savedLanguage = localStorage.getItem('bodecoin-language') as Language;
   if (savedLanguage && ['pt', 'es', 'en'].includes(savedLanguage)) {
     return savedLanguage;
   }
@@ -96,7 +96,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('bodescoin-language', lang);
+    localStorage.setItem('bodecoin-language', lang);
   };
 
   const t = (key: string): string => {

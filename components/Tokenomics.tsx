@@ -6,11 +6,11 @@ const Tokenomics: React.FC = () => {
   const { t } = useLanguage();
 
   const data = [
-    { name: t('tokenomics.allocation.community'), value: 45, color: '#EAB308' }, // Gold
-    { name: t('tokenomics.allocation.liquidity'), value: 25, color: '#A16207' }, // Dark Gold
-    { name: t('tokenomics.allocation.charity'), value: 15, color: '#CA8A04' }, // Medium Gold
-    { name: t('tokenomics.allocation.development'), value: 10, color: '#525252' }, // Dark Gray
-    { name: t('tokenomics.allocation.marketing'), value: 5, color: '#262626' }, // Darker Gray
+    { name: t('tokenomics.allocation.community'), value: 43, color: '#EAB308' }, // Gold
+    { name: t('tokenomics.allocation.liquidity'), value: 50, color: '#A16207' }, // Dark Gold
+    { name: t('tokenomics.allocation.charity'), value: 3, color: '#CA8A04' }, // Medium Gold
+    { name: t('tokenomics.allocation.reserve'), value: 5, color: '#525252' }, // Dark Gray
+    { name: t('tokenomics.allocation.marketing'), value: 1, color: '#262626' }, // Darker Gray
   ];
 
   return (
@@ -21,7 +21,7 @@ const Tokenomics: React.FC = () => {
           {/* Chart Side */}
           <div className="w-full md:w-1/2 h-[400px] md:h-[500px] relative">
             <h3 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-bold text-white text-center">
-              10 BI<br/><span className="text-sm text-gray-400 font-normal">BODE</span>
+              1 BI<br/><span className="text-sm text-gray-400 font-normal">BodeCoin</span>
             </h3>
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -55,7 +55,7 @@ const Tokenomics: React.FC = () => {
               <div className="bg-dark-900 p-8 rounded-lg border-l-4 border-gold-500 shadow-xl">
                 <div className="flex justify-between items-center mb-4">
                     <span className="text-gray-400 text-lg">{t('tokenomics.totalSupply')}</span>
-                    <span className="text-white font-bold text-2xl">10.000.000.000 BODE</span>
+                    <span className="text-white font-bold text-2xl">1.000.000.000 BodeCoin</span>
                 </div>
                 <div className="flex justify-between items-center mb-4">
                     <span className="text-gray-400 text-lg">{t('tokenomics.network')}</span>
@@ -63,7 +63,7 @@ const Tokenomics: React.FC = () => {
                 </div>
                 <div className="flex justify-between items-center">
                     <span className="text-gray-400 text-lg">{t('tokenomics.tax')}</span>
-                    <span className="text-gold-500 font-bold text-lg">2% (LP + Caridade)</span>
+                    <span className="text-gold-500 font-bold text-lg">3% (LP + Filantropia)</span>
                 </div>
               </div>
 

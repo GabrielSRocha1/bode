@@ -60,7 +60,7 @@ const AiAssistant: React.FC = () => {
           <div className="bg-dark-900 p-4 border-b border-gray-700 flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Bot className="text-gold-500" size={20} />
-              <span className="text-white font-bold">Suporte BodesCoin</span>
+              <span className="text-white font-bold">Suporte BodeCoin</span>
             </div>
             <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white">
               <X size={18} />
