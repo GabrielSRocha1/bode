@@ -27,18 +27,19 @@ const Hero: React.FC = () => {
               {t('hero.subtitle')}
             </p>
           </div>
-          {/* Botão Empresas Parceiras - Mobile Only */}
-          <div className="mt-6 pr-0">
-            <a
-              href="https://parceiros.bodecoin.digital/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gold-600 hover:bg-gold-500 text-black px-5 py-2 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer text-sm"
-            >
-              {t('nav.buyNow')}
-            </a>
-          </div>
         </div>
+      </div>
+      
+      {/* Botão Empresas Parceiras - Mobile Only (embaixo da imagem) */}
+      <div className="sm:hidden flex justify-center py-2 bg-dark-900">
+        <a
+          href="https://parceiros.bodecoin.digital/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer text-base"
+        >
+          {t('nav.buyNow')}
+        </a>
       </div>
       
       {/* Desktop: Background Image Full Screen */}
