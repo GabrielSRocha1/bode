@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const PaymentDownloadSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
   
-  const linkToCopy = '4t7EWkBU3HAvcFTQRqzHoZ1g3GCJ3BpxwGLf876fLLjV';
+  const linkToCopy = '0xba85cbb179b816c8f12b87f122adbe4b5a5b516b';
   
   const handleCopyLink = async () => {
     try {

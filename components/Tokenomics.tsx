@@ -8,7 +8,7 @@ const Tokenomics: React.FC = () => {
   const data = [
     { name: t('tokenomics.allocation.liquidity'), value: 50, color: '#A16207' }, // Dark Gold
     { name: t('tokenomics.allocation.community'), value: 23, color: '#EAB308' }, // Gold
-    { name: t('tokenomics.allocation.fees'), value: 10, color: '#CA8A04' }, // Medium Gold
+    { name: t('tokenomics.allocation.fees'), value: 3, color: '#CA8A04' }, // Medium Gold
     { name: t('tokenomics.allocation.reserve'), value: 10, color: '#525252' }, // Dark Gray
     { name: t('tokenomics.allocation.gifts'), value: 5, color: '#78716C' }, // Brown Gray
     { name: t('tokenomics.allocation.charity'), value: 1, color: '#404040' }, // Medium Gray
@@ -65,7 +65,7 @@ const Tokenomics: React.FC = () => {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0">
                     <span className="text-gray-400 text-base sm:text-lg">{t('tokenomics.tax')}</span>
-                    <span className="text-gold-500 font-bold text-base sm:text-lg">10%</span>
+                    <span className="text-gold-500 font-bold text-base sm:text-lg">3%</span>
                 </div>
               </div>
 

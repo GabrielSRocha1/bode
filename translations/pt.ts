@@ -68,7 +68,7 @@ export default {
   'tokenomics.allocation.marketing': 'Marketing',
   'tokenomics.allocation.fees': 'Taxas',
   'tokenomics.allocation.gifts': 'Brindes',
-  'tokenomics.footer': '*A taxa de 10% garante liquidez sustentável para o projeto e alimenta os fundos contínuos de filantropia da Bodecoin, garantindo que cada transação ajude quem precisa.',
+  'tokenomics.footer': '*A taxa de 3% garante liquidez sustentável para o projeto e alimenta os fundos contínuos de filantropia da Bodecoin, garantindo que cada transação ajude quem precisa.',
 
   // Footer
   'footer.heading': 'Entre para a Revolução.',
