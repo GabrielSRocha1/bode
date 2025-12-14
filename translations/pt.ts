@@ -61,12 +61,14 @@ export default {
   'tokenomics.totalSupply': 'Suprimento Total',
   'tokenomics.network': 'Rede',
   'tokenomics.tax': 'Taxa (Tax)',
-  'tokenomics.allocation.community': 'Comunidade / Public Sale',
+  'tokenomics.allocation.community': 'Criador/Investidor',
   'tokenomics.allocation.liquidity': 'Liquidez (LP)',
   'tokenomics.allocation.charity': 'Fundo Filantropia',
   'tokenomics.allocation.reserve': 'Reserva',
   'tokenomics.allocation.marketing': 'Marketing',
-  'tokenomics.footer': '*A taxa de 1% garante liquidez sustentável para o projeto e alimenta os fundos contínuos de filantropia da Bodecoin, garantindo que cada transação ajude quem precisa.',
+  'tokenomics.allocation.fees': 'Taxas',
+  'tokenomics.allocation.gifts': 'Brindes',
+  'tokenomics.footer': '*A taxa de 10% garante liquidez sustentável para o projeto e alimenta os fundos contínuos de filantropia da Bodecoin, garantindo que cada transação ajude quem precisa.',
 
   // Footer
   'footer.heading': 'Entre para a Revolução.',

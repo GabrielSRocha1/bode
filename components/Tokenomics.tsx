@@ -6,10 +6,12 @@ const Tokenomics: React.FC = () => {
   const { t } = useLanguage();
 
   const data = [
-    { name: t('tokenomics.allocation.community'), value: 43, color: '#EAB308' }, // Gold
     { name: t('tokenomics.allocation.liquidity'), value: 50, color: '#A16207' }, // Dark Gold
-    { name: t('tokenomics.allocation.charity'), value: 3, color: '#CA8A04' }, // Medium Gold
-    { name: t('tokenomics.allocation.reserve'), value: 5, color: '#525252' }, // Dark Gray
+    { name: t('tokenomics.allocation.community'), value: 23, color: '#EAB308' }, // Gold
+    { name: t('tokenomics.allocation.fees'), value: 10, color: '#CA8A04' }, // Medium Gold
+    { name: t('tokenomics.allocation.reserve'), value: 10, color: '#525252' }, // Dark Gray
+    { name: t('tokenomics.allocation.gifts'), value: 5, color: '#78716C' }, // Brown Gray
+    { name: t('tokenomics.allocation.charity'), value: 1, color: '#404040' }, // Medium Gray
     { name: t('tokenomics.allocation.marketing'), value: 1, color: '#262626' }, // Darker Gray
   ];
 
@@ -52,18 +54,18 @@ const Tokenomics: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">{t('tokenomics.title')}</h2>
             <div className="space-y-6">
               
-              <div className="bg-dark-900 p-8 rounded-lg border-l-4 border-gold-500 shadow-xl">
-                <div className="flex justify-between items-center mb-4">
-                    <span className="text-gray-400 text-lg">{t('tokenomics.totalSupply')}</span>
-                    <span className="text-white font-bold text-2xl">1.000.000.000 BodeCoin</span>
+              <div className="bg-dark-900 p-6 md:p-8 rounded-lg border-l-4 border-gold-500 shadow-xl">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 sm:mb-4 gap-3 sm:gap-0">
+                    <span className="text-gray-400 text-base sm:text-lg">{t('tokenomics.totalSupply')}</span>
+                    <span className="text-white font-bold text-xl sm:text-2xl break-words">1.000.000.000 BodeCoin</span>
                 </div>
-                <div className="flex justify-between items-center mb-4">
-                    <span className="text-gray-400 text-lg">{t('tokenomics.network')}</span>
-                    <span className="text-white font-bold text-lg">Binance Smart Chain (BSC)</span>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 sm:mb-4 gap-3 sm:gap-0">
+                    <span className="text-gray-400 text-base sm:text-lg">{t('tokenomics.network')}</span>
+                    <span className="text-white font-bold text-base sm:text-lg break-words">Binance Smart Chain (BNB)</span>
                 </div>
-                <div className="flex justify-between items-center">
-                    <span className="text-gray-400 text-lg">{t('tokenomics.tax')}</span>
-                    <span className="text-gold-500 font-bold text-lg">3% (LP + Filantropia)</span>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0">
+                    <span className="text-gray-400 text-base sm:text-lg">{t('tokenomics.tax')}</span>
+                    <span className="text-gold-500 font-bold text-base sm:text-lg">10%</span>
                 </div>
               </div>
 

@@ -30,18 +30,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
       
-      {/* Botão Empresas Parceiras - Mobile Only (embaixo da imagem) */}
-      <div className="sm:hidden flex justify-center py-2 bg-dark-900">
-        <a
-          href="https://parceiros.bodecoin.digital/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer text-base"
-        >
-          {t('nav.buyNow')}
-        </a>
-      </div>
-      
       {/* Desktop: Background Image Full Screen */}
       <div 
         className="hidden sm:block absolute inset-0 bg-cover bg-center bg-no-repeat z-0 min-h-[100vh]"
