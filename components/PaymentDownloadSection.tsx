@@ -51,14 +51,9 @@ const PaymentDownloadSection: React.FC = () => {
               </span>
             )}
           </button>
-          <a 
-            href="https://youtu.be/PPE58uGJfx4?si=Wvr_bSzmjqnzbvrR" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex flex-col items-center hover:opacity-80 transition-opacity"
-          >
+          <div className="flex flex-col items-center">
             <img src="/yutube 4.png" alt="YouTube" className="h-24 md:h-32 w-auto object-contain" />
-          </a>
+          </div>
         </div>
       </div>
     </div>
