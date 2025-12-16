@@ -25,7 +25,7 @@ const PaymentDownloadSection: React.FC = () => {
         {/* App Store and Google Play Section */}
         <div className="flex items-center justify-center gap-0 flex-shrink-0">
           <div className="flex flex-col items-center">
-            <img src="/unnamed (1).png" alt="App Store" className="h-24 md:h-32 w-auto object-contain" />
+            <img src="/WhatsApp Image 2025-12-16 at 09.30.23 (3).jpeg" alt="Imagem 1 BodeCoin" className="h-24 md:h-32 w-auto object-contain" />
           </div>
           <a 
             href="https://okx.com/pt-br/join/69600528" 
@@ -33,7 +33,7 @@ const PaymentDownloadSection: React.FC = () => {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
           >
-            <img src="/unnamed.png" alt="Google Play" className="h-24 md:h-32 w-auto object-contain" />
+            <img src="/WhatsApp Image 2025-12-16 at 09.30.23.jpeg" alt="Imagem 2 BodeCoin" className="h-24 md:h-32 w-auto object-contain" />
           </a>
         </div>
 
@@ -44,7 +44,7 @@ const PaymentDownloadSection: React.FC = () => {
             className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer relative group"
             title={copied ? 'Link copiado!' : 'Clique para copiar o link'}
           >
-            <img src="WhatsApp Image 2025-12-05 at 12.10.49.jpeg" alt="Google" className="h-24 md:h-32 w-auto object-contain" />
+            <img src="/WhatsApp Image 2025-12-16 at 09.30.23 (1).jpeg" alt="Imagem 3 BodeCoin" className="h-24 md:h-32 w-auto object-contain" />
             {copied && (
               <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gold-500 text-black text-xs font-bold px-2 py-1 rounded whitespace-nowrap">
                 Link copiado!
@@ -52,7 +52,7 @@ const PaymentDownloadSection: React.FC = () => {
             )}
           </button>
           <div className="flex flex-col items-center">
-            <img src="/yutube 4.png" alt="YouTube" className="h-24 md:h-32 w-auto object-contain" />
+            <img src="/WhatsApp Image 2025-12-16 at 09.30.24 (1).jpeg" alt="Imagem 4 BodeCoin" className="h-24 md:h-32 w-auto object-contain" />
           </div>
         </div>
       </div>
