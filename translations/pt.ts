@@ -61,7 +61,7 @@ export default {
   'tokenomics.totalSupply': 'Suprimento Total',
   'tokenomics.network': 'Rede',
   'tokenomics.tax': 'Taxa (Tax)',
-  'tokenomics.allocation.community': 'Criador/Investidor',
+  'tokenomics.allocation.community': 'Equipe/Investidor',
   'tokenomics.allocation.liquidity': 'Liquidez (LP)',
   'tokenomics.allocation.charity': 'Fundo Filantropia',
   'tokenomics.allocation.reserve': 'Reserva',

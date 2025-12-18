@@ -7,10 +7,9 @@ const Tokenomics: React.FC = () => {
 
   const data = [
     { name: t('tokenomics.allocation.liquidity'), value: 50, color: '#A16207' }, // Dark Gold
-    { name: t('tokenomics.allocation.community'), value: 23, color: '#EAB308' }, // Gold
-    { name: t('tokenomics.allocation.fees'), value: 10, color: '#CA8A04' }, // Medium Gold
+    { name: t('tokenomics.allocation.community'), value: 30, color: '#EAB308' }, // Gold - Equipe/Investidor
     { name: t('tokenomics.allocation.reserve'), value: 10, color: '#525252' }, // Dark Gray
-    { name: t('tokenomics.allocation.gifts'), value: 5, color: '#78716C' }, // Brown Gray
+    { name: t('tokenomics.allocation.gifts'), value: 8, color: '#78716C' }, // Brown Gray
     { name: t('tokenomics.allocation.charity'), value: 1, color: '#404040' }, // Medium Gray
     { name: t('tokenomics.allocation.marketing'), value: 1, color: '#262626' }, // Darker Gray
   ];
