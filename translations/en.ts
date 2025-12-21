@@ -68,7 +68,7 @@ export default {
   'tokenomics.allocation.marketing': 'Marketing',
   'tokenomics.allocation.fees': 'Fees',
   'tokenomics.allocation.gifts': 'Gifts',
-  'tokenomics.footer': '*The 3% fee ensures sustainable liquidity for the project and feeds the continuous philanthropy funds of Bodecoin, ensuring that each transaction helps those in need.',
+  'tokenomics.footer': '*The 5% fee ensures sustainable liquidity for the project and feeds the continuous philanthropy funds of Bodecoin, ensuring that each transaction helps those in need.',
 
   // Footer
   'footer.heading': 'Join the Revolution.',

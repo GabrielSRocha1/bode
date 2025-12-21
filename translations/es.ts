@@ -68,7 +68,7 @@ export default {
   'tokenomics.allocation.marketing': 'Marketing',
   'tokenomics.allocation.fees': 'Tarifas',
   'tokenomics.allocation.gifts': 'Regalos',
-  'tokenomics.footer': '*La tarifa del 3% garantiza liquidez sostenible para el proyecto y alimenta los fondos continuos de filantropía de Bodecoin, garantizando que cada transacción ayude a quienes lo necesitan.',
+  'tokenomics.footer': '*La tarifa del 5% garantiza liquidez sostenible para el proyecto y alimenta los fondos continuos de filantropía de Bodecoin, garantizando que cada transacción ayude a quienes lo necesitan.',
 
   // Footer
   'footer.heading': 'Únete a la Revolución.',
