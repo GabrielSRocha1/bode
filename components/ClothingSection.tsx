@@ -1,6 +1,11 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ClothingSection: React.FC = () => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
   const clothingImages = [
     '/Gemini_Generated_Image_1atbjb1atbjb1atb.png',
     '/Gemini_Generated_Image_3aubb43aubb43aub.png',
@@ -27,6 +32,65 @@ const ClothingSection: React.FC = () => {
     }
   }, []);
 
+  const openImage = (index: number) => {
+    setSelectedImageIndex(index);
+    document.body.style.overflow = 'hidden'; // Previne scroll do body quando modal está aberto
+  };
+
+  const closeImage = () => {
+    setSelectedImageIndex(null);
+    document.body.style.overflow = 'unset';
+  };
+
+  const nextImage = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex + 1) % clothingImages.length);
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex - 1 + clothingImages.length) % clothingImages.length);
+    }
+  };
+
+  // Gestos de swipe para mobile
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe && selectedImageIndex !== null) {
+      nextImage();
+    }
+    if (isRightSwipe && selectedImageIndex !== null) {
+      prevImage();
+    }
+  };
+
+  // Fechar com ESC
+  React.useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && selectedImageIndex !== null) {
+        closeImage();
+      }
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [selectedImageIndex]);
+
   // Dividir em duas linhas: 8 em cima, 5 em baixo (ou 8 se tiver mais imagens)
   const topRow = clothingImages.slice(0, 8);
   const bottomRow = clothingImages.slice(8, 13);
@@ -35,13 +99,17 @@ const ClothingSection: React.FC = () => {
     <section className="py-16 bg-dark-900">
       <div className="max-w-[90%] xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
-          Na Compra de BODECoin Voce Ganha Produtos da Grif. Bode Coin
+          Na Compra de BODECoin Voce Ganha Produtos da Grif. Bode Coin 🎉
         </h2>
         <div className="space-y-4">
           {/* Primeira linha - 8 imagens centralizadas */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {topRow.map((image, index) => (
-              <div key={index} className="flex-shrink-0">
+              <div 
+                key={index} 
+                className="flex-shrink-0 cursor-pointer"
+                onClick={() => openImage(index)}
+              >
                 <img
                   src={image}
                   alt={`Roupa ${index + 1}`}
@@ -54,7 +122,11 @@ const ClothingSection: React.FC = () => {
           {/* Segunda linha - 5 imagens centralizadas (ou 8 se tiver mais) */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {bottomRow.map((image, index) => (
-              <div key={index + 8} className="flex-shrink-0">
+              <div 
+                key={index + 8} 
+                className="flex-shrink-0 cursor-pointer"
+                onClick={() => openImage(index + 8)}
+              >
                 <img
                   src={image}
                   alt={`Roupa ${index + 9}`}
@@ -75,6 +147,68 @@ const ClothingSection: React.FC = () => {
           </a>
         </div>
       </div>
+
+      {/* Modal/Lightbox */}
+      {selectedImageIndex !== null && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-2 sm:p-4"
+          onClick={closeImage}
+        >
+          {/* Botão Fechar - Mobile friendly */}
+          <button
+            onClick={closeImage}
+            className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white hover:text-gold-500 transition-colors z-10 p-2 sm:p-1 touch-manipulation"
+            aria-label="Fechar"
+          >
+            <X size={28} className="sm:w-8 sm:h-8" />
+          </button>
+
+          {/* Botão Anterior - Mobile friendly */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gold-500 active:text-gold-400 transition-colors z-10 bg-black/70 sm:bg-black/50 rounded-full p-3 sm:p-2 touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
+            aria-label="Imagem anterior"
+          >
+            <ChevronLeft size={24} className="sm:w-8 sm:h-8" />
+          </button>
+
+          {/* Botão Próximo - Mobile friendly */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gold-500 active:text-gold-400 transition-colors z-10 bg-black/70 sm:bg-black/50 rounded-full p-3 sm:p-2 touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
+            aria-label="Próxima imagem"
+          >
+            <ChevronRight size={24} className="sm:w-8 sm:h-8" />
+          </button>
+
+          {/* Imagem - Mobile optimized com suporte a swipe */}
+          <div 
+            className="w-full h-full max-w-[95%] sm:max-w-[90%] max-h-[85%] sm:max-h-[90%] flex items-center justify-center px-8 sm:px-4 touch-none"
+            onClick={(e) => e.stopPropagation()}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
+            <img
+              src={clothingImages[selectedImageIndex]}
+              alt={`Roupa ${selectedImageIndex + 1}`}
+              className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg select-none"
+              draggable={false}
+            />
+          </div>
+
+          {/* Indicador de posição - Mobile friendly */}
+          <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 text-white text-xs sm:text-sm bg-black/70 sm:bg-black/50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">
+            {selectedImageIndex + 1} / {clothingImages.length}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
