@@ -196,11 +196,7 @@ const Carousel: React.FC = () => {
               </ul>
               
               <p className="text-gray-300 text-sm md:text-base leading-relaxed mt-4">
-                Enquanto os bancos te cobram para usar seu próprio dinheiro, a Bode Coin te convida a ser dono do sistema. É o fim das taxas invisíveis e o começo da sua verdadeira liberdade financeira.
-              </p>
-              
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed mt-4 italic">
-                Gostaria que eu preparasse um guia simples de "Como explicar a Blockchain para um irmão do motoclube", para facilitar o seu trabalho de educação e engajamento na base?
+                Enquanto os bancos te cobram para usar seu próprio dinheiro, a Bode Coin te convida a ser Parte do sistema. É o fim das taxas invisíveis e o começo da sua verdadeira liberdade financeira.
               </p>
             </div>
           </div>
