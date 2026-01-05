@@ -8,6 +8,8 @@ import Timeline from './components/Timeline';
 import Pagamento from './components/Pagamento';
 import Tokenomics from './components/Tokenomics';
 import Gallery from './components/Gallery';
+import Carousel from './components/Carousel';
+import ClothingSection from './components/ClothingSection';
 import Footer from './components/Footer';
 import AiAssistant from './components/AiAssistant';
 
@@ -25,6 +27,8 @@ function App() {
           <Pagamento />
         <Tokenomics />
         <Gallery />
+        <Carousel />
+        <ClothingSection />
       </main>
       <Footer />
       <AiAssistant />
