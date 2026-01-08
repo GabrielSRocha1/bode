@@ -19,7 +19,12 @@ const ClothingSection: React.FC = () => {
     '/Gemini_Generated_Image_trio39trio39trio.png',
     '/Gemini_Generated_Image_xsfbkgxsfbkgxsfb.png',
     '/Gemini_Generated_Image_z2rg1lz2rg1lz2rg.png',
-    '/Gemini_Generated_Image_r3u1por3u1por3u1 (1).png'
+    '/Gemini_Generated_Image_r3u1por3u1por3u1 (1).png',
+    '/WhatsApp Image 2026-01-08 at 11.51.49 (1).jpeg',
+    '/WhatsApp Image 2026-01-08 at 11.51.49 (2).jpeg',
+    '/WhatsApp Image 2026-01-08 at 11.51.49.jpeg',
+    '/WhatsApp Image 2026-01-08 at 11.51.50 (1).jpeg',
+    '/WhatsApp Image 2026-01-08 at 11.51.50.jpeg'
   ];
 
   const handleScrollToPayment = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -91,9 +96,9 @@ const ClothingSection: React.FC = () => {
     return () => window.removeEventListener('keydown', handleEscape);
   }, [selectedImageIndex]);
 
-  // Dividir em duas linhas: 8 em cima, 5 em baixo (ou 8 se tiver mais imagens)
-  const topRow = clothingImages.slice(0, 8);
-  const bottomRow = clothingImages.slice(8, 13);
+  // Dividir em duas linhas: 9 em cima, 9 em baixo (18 imagens no total)
+  const topRow = clothingImages.slice(0, 9);
+  const bottomRow = clothingImages.slice(9, 18);
 
   return (
     <section className="py-16 bg-dark-900">
@@ -113,24 +118,24 @@ const ClothingSection: React.FC = () => {
                 <img
                   src={image}
                   alt={`Roupa ${index + 1}`}
-                  className="h-24 md:h-32 w-auto object-contain rounded-lg hover:opacity-90 transition-opacity"
+                  className="h-20 md:h-28 w-auto object-contain rounded-lg hover:opacity-90 transition-opacity"
                 />
               </div>
             ))}
           </div>
 
-          {/* Segunda linha - 5 imagens centralizadas (ou 8 se tiver mais) */}
+          {/* Segunda linha - 9 imagens centralizadas */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {bottomRow.map((image, index) => (
               <div 
-                key={index + 8} 
+                key={index + 9} 
                 className="flex-shrink-0 cursor-pointer"
-                onClick={() => openImage(index + 8)}
+                onClick={() => openImage(index + 9)}
               >
                 <img
                   src={image}
-                  alt={`Roupa ${index + 9}`}
-                  className="h-24 md:h-32 w-auto object-contain rounded-lg hover:opacity-90 transition-opacity"
+                  alt={`Roupa ${index + 10}`}
+                  className="h-20 md:h-28 w-auto object-contain rounded-lg hover:opacity-90 transition-opacity"
                 />
               </div>
             ))}
