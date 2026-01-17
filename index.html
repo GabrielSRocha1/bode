@@ -1,79 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon-cripto.png" />
-    <title>BodeCoin | A Cripto do Asfalto</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Montserrat', 'sans-serif'],
-              body: ['Roboto', 'sans-serif'],
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon-cripto.png" />
+  <title>BodeCoin | A Cripto do Asfalto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            body: ['Roboto', 'sans-serif'],
+          },
+          colors: {
+            gold: {
+              400: '#FACC15',
+              500: '#EAB308',
+              600: '#CA8A04',
             },
-            colors: {
-              gold: {
-                400: '#FACC15',
-                500: '#EAB308',
-                600: '#CA8A04',
-              },
-              dark: {
-                900: '#0a0a0a',
-                800: '#171717',
-                700: '#262626',
-              }
+            dark: {
+              900: '#0a0a0a',
+              800: '#171717',
+              700: '#262626',
             }
           }
         }
       }
-    </script>
-    <style>
-      html {
-        scroll-behavior: smooth;
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #050505;
+      color: #e5e5e5;
+      overflow-x: hidden;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
       }
-      body {
-        background-color: #050505;
-        color: #e5e5e5;
-        overflow-x: hidden;
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-      .scrollbar-hide::-webkit-scrollbar {
-          display: none;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
-      .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(-10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .animate-fade-in {
-        animation: fadeIn 0.2s ease-out;
-      }
-      .animate-fade-in-up {
-        animation: fadeInUp 0.3s ease-out;
-      }
-    </style>
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.3s ease-out;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -86,39 +98,13 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
-  <script type="module">
-    import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
 
-    (async () => {
-      try {
-        const widget = await Chatbox.initBubble({
-          agentId: 'cmipc6k700zf41i1osd87c2pn',
-
-          //[optional] If provided will create a contact for the user and link it to the conversation
-          contact: {
-            firstName: 'John',
-            lastName: 'Doe',
-            email: 'customer@email.com',
-            phoneNumber: '+33612345644',
-          },
-          
-          //[optional] Provided context will be Appended to the Agent system prompt
-          context: "The user lives in the city of São Paulo and is interested in learning more details about the online consulting service.",
-        });
-
-        // Optional Controllers:
-        widget.open();
-        widget.close();
-        widget.toggle();
-      } catch (error) {
-        console.error('Error initializing Chatvolt:', error);
-      }
-    })();
-  </script>
 </body>
+
 </html>

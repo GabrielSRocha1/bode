@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 const PaymentDownloadSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  
+
   const linkToCopy = '';
-  
+
   const handleCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(linkToCopy);
@@ -27,13 +27,13 @@ const PaymentDownloadSection: React.FC = () => {
           <div className="flex flex-col items-center">
             <img src="/WhatsApp Image 2025-12-16 at 09.30.23 (3).jpeg" alt="Imagem 1 BodeCoin" className="h-24 md:h-32 w-auto object-contain" />
           </div>
-          <a 
-            href="https://okx.com/pt-br/join/69600528" 
-            target="_blank" 
+          <a
+            href="https://okx.com/pt-br/join/69600528"
+            target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
           >
-            <img src="/WhatsApp Image 2025-12-16 at 09.30.23.jpeg" alt="Imagem 2 BodeCoin" className="h-24 md:h-32 w-auto object-contain" />
+            <img src="/conta.png" alt="Imagem 2 BodeCoin" className="h-24 md:h-32 w-auto object-contain" />
           </a>
         </div>
 
@@ -44,7 +44,7 @@ const PaymentDownloadSection: React.FC = () => {
             className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer relative group"
             title={copied ? 'Link copiado!' : 'Clique para copiar o link'}
           >
-            <img src="/WhatsApp Image 2025-12-16 at 09.30.23 (1).jpeg" alt="Imagem 3 BodeCoin" className="h-24 md:h-32 w-auto object-contain" />
+            <img src="/ID bodecoin.png" alt="Imagem 3 BodeCoin" className="h-24 md:h-32 w-auto object-contain" />
             {copied && (
               <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gold-500 text-black text-xs font-bold px-2 py-1 rounded whitespace-nowrap">
                 Link copiado!
