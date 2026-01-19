@@ -79,11 +79,18 @@ const Pagamento: React.FC = () => {
                 alt="Detalhe 3"
                 className="w-[18.75%] h-auto object-contain rounded-lg shadow-md"
               />
-              <img
-                src="/conta.png"
-                alt="Detalhe 4"
-                className="w-[18.75%] h-auto object-contain rounded-lg shadow-md"
-              />
+              <a
+                href="https://www.solflare.com/guides/how-to-use-the-solflare-card/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[18.75%] cursor-pointer hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="/conta.png"
+                  alt="Detalhe 4"
+                  className="w-full h-auto object-contain rounded-lg shadow-md"
+                />
+              </a>
               <button
                 onClick={handleCopyLink}
                 className="flex flex-col items-center hover:opacity-80 transition-opacity cursor-pointer relative group w-[18.75%]"
