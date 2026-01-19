@@ -9,7 +9,6 @@ import Pagamento from './components/Pagamento';
 import Tokenomics from './components/Tokenomics';
 import Gallery from './components/Gallery';
 import Carousel from './components/Carousel';
-import ClothingSection from './components/ClothingSection';
 import Footer from './components/Footer';
 import AiAssistant from './components/AiAssistant';
 
@@ -17,22 +16,21 @@ import AiAssistant from './components/AiAssistant';
 function App() {
   return (
     <LanguageProvider>
-    <div className="font-sans antialiased text-white bg-black selection:bg-gold-500 selection:text-black">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Features />
-        <Timeline />
+      <div className="font-sans antialiased text-white bg-black selection:bg-gold-500 selection:text-black">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Features />
+          <Timeline />
           <Pagamento />
-        <Tokenomics />
-        <Gallery />
-        <Carousel />
-        <ClothingSection />
-      </main>
-      <Footer />
-      <AiAssistant />
-    </div>
+          <Tokenomics />
+          <Gallery />
+          <Carousel />
+        </main>
+        <Footer />
+        <AiAssistant />
+      </div>
     </LanguageProvider>
   );
 }
