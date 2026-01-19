@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <div id="comprar" className="relative w-full overflow-hidden bg-dark-900 sm:min-h-screen">
+    <div id="home" className="relative w-full overflow-hidden bg-dark-900 sm:min-h-screen">
       {/* Mobile: apenas imagem de fundo */}
       <div className="relative w-full aspect-[4/3] sm:hidden">
         <div

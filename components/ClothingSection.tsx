@@ -76,7 +76,7 @@ const ClothingSection: React.FC = () => {
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe && selectedImageIndex !== null) {
       nextImage();
     }
@@ -110,8 +110,8 @@ const ClothingSection: React.FC = () => {
           {/* Primeira linha - 8 imagens centralizadas */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {topRow.map((image, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="flex-shrink-0 cursor-pointer"
                 onClick={() => openImage(index)}
               >
@@ -127,8 +127,8 @@ const ClothingSection: React.FC = () => {
           {/* Segunda linha - 9 imagens centralizadas */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {bottomRow.map((image, index) => (
-              <div 
-                key={index + 9} 
+              <div
+                key={index + 9}
                 className="flex-shrink-0 cursor-pointer"
                 onClick={() => openImage(index + 9)}
               >
@@ -144,8 +144,9 @@ const ClothingSection: React.FC = () => {
 
         <div className="text-center mt-12">
           <a
-            href="#pagamento-imagens"
-            onClick={handleScrollToPayment}
+            href="https://wa.link/cv1m27"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-extrabold text-xl sm:text-2xl transition-all transform hover:scale-105 cursor-pointer"
           >
             Comprar Agora
@@ -155,7 +156,7 @@ const ClothingSection: React.FC = () => {
 
       {/* Modal/Lightbox */}
       {selectedImageIndex !== null && (
-        <div 
+        <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-2 sm:p-4"
           onClick={closeImage}
         >
@@ -193,7 +194,7 @@ const ClothingSection: React.FC = () => {
           </button>
 
           {/* Imagem - Mobile optimized com suporte a swipe */}
-          <div 
+          <div
             className="w-full h-full max-w-[95%] sm:max-w-[90%] max-h-[85%] sm:max-h-[90%] flex items-center justify-center px-8 sm:px-4 touch-none"
             onClick={(e) => e.stopPropagation()}
             onTouchStart={onTouchStart}

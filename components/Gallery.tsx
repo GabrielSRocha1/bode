@@ -34,9 +34,9 @@ const Gallery: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 h-[500px]">
         {images.map((img, idx) => (
           <div key={idx} className="relative group overflow-hidden h-full">
-            <img 
-              src={img.src} 
-              alt={img.alt} 
+            <img
+              src={img.src}
+              alt={img.alt}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
             />
             <div className="absolute inset-0 bg-black/60 group-hover:bg-black/30 transition-colors flex items-center justify-center">
@@ -50,8 +50,9 @@ const Gallery: React.FC = () => {
 
       <div className="py-8 text-center">
         <a
-          href="#pagamento-imagens"
-          onClick={handleScrollToPayment}
+          href="https://wa.link/cv1m27"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-extrabold text-xl sm:text-2xl transition-all transform hover:scale-105 cursor-pointer"
         >
           Comprar Agora

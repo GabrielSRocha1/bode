@@ -44,15 +44,19 @@ const Navbar: React.FC = () => {
       <div className="max-w-[90%] xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
-            <div className="flex-shrink-0 text-gold-500 flex items-center gap-1.5 md:gap-2">
+            <a
+              href="#home"
+              onClick={(e) => handleNavClick(e, '#home')}
+              className="flex-shrink-0 text-gold-500 flex items-center gap-1.5 md:gap-2 cursor-pointer"
+            >
               <Bitcoin size={24} className="text-gold-500 md:w-8 md:h-8" />
               <span className="font-sans font-bold text-lg md:text-2xl tracking-wider text-white">BODE<span className="text-gold-500">COIN</span></span>
-            </div>
+            </a>
             <div className="md:hidden">
               <LanguageSelector />
             </div>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
