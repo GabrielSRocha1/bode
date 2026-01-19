@@ -60,15 +60,15 @@ export default {
   'tokenomics.title': 'Tokenomics',
   'tokenomics.totalSupply': 'Suministro Total',
   'tokenomics.network': 'Red',
-  'tokenomics.tax': 'Tarifa (Tax)',
+  'tokenomics.tax': '',
   'tokenomics.allocation.community': 'Equipo/Inversor',
   'tokenomics.allocation.liquidity': 'Liquidez (LP)',
   'tokenomics.allocation.charity': 'Fondo de Caridad',
   'tokenomics.allocation.reserve': 'Reserva',
   'tokenomics.allocation.marketing': 'Marketing',
-  'tokenomics.allocation.fees': 'Tarifas',
+  'tokenomics.allocation.fees': '',
   'tokenomics.allocation.gifts': 'Regalos',
-  'tokenomics.footer': '*La tarifa del 5% garantiza liquidez sostenible para el proyecto y alimenta los fondos continuos de filantropía de Bodecoin, garantizando que cada transacción ayude a quienes lo necesitan.',
+  'tokenomics.footer': '',
 
   // Footer
   'footer.heading': 'Únete a la Revolución.',

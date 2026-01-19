@@ -60,15 +60,15 @@ export default {
   'tokenomics.title': 'Tokenomics',
   'tokenomics.totalSupply': 'Total Supply',
   'tokenomics.network': 'Network',
-  'tokenomics.tax': 'Tax Fee',
+  'tokenomics.tax': '',
   'tokenomics.allocation.community': 'Team/Investor',
   'tokenomics.allocation.liquidity': 'Liquidity (LP)',
   'tokenomics.allocation.charity': 'Charity Fund',
   'tokenomics.allocation.reserve': 'Reserve',
   'tokenomics.allocation.marketing': 'Marketing',
-  'tokenomics.allocation.fees': 'Fees',
+  'tokenomics.allocation.fees': '',
   'tokenomics.allocation.gifts': 'Gifts',
-  'tokenomics.footer': '*The 5% fee ensures sustainable liquidity for the project and feeds the continuous philanthropy funds of Bodecoin, ensuring that each transaction helps those in need.',
+  'tokenomics.footer': '',
 
   // Footer
   'footer.heading': 'Join the Revolution.',

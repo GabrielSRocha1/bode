@@ -3,7 +3,7 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 // Initialize the client strictly as per guidelines
 // Note: In a real production app, ensure process.env.API_KEY is defined.
 // For this demo, we assume the environment is set up correctly.
-const apiKey = process.env.API_KEY || ''; 
+const apiKey = 'ffa40eab-f2fc-48bd-a762-dd4a01592fa0';
 const ai = new GoogleGenAI({ apiKey });
 
 const SYSTEM_INSTRUCTION = `
