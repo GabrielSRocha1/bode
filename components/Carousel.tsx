@@ -7,7 +7,6 @@ const Carousel: React.FC = () => {
   const imageDiv2Text2 = '/IMG_20260105_141828.jpg';
   const imageDiv2Text3 = '/IMG_20260105_141453.jpg';
   const imageDiv2Text4 = '/IMG_20260105_141812.jpg';
-  const imageDiv3 = '/IMG_20260105_140543.png';
 
   const imageLinks = [
     {
@@ -27,7 +26,7 @@ const Carousel: React.FC = () => {
   return (
     <section className="py-16 bg-dark-900">
       <div className="max-w-[90%] xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Primeira parte - imagem e texto */}
           <div>
             <div className="mb-4">
@@ -51,7 +50,7 @@ const Carousel: React.FC = () => {
               </h4>
 
               <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                Grandes oportunidades como Ethereum e Binance Coin começaram pequenas. A BODE segue esse rastro de visão, mas com um diferencial exclusivo: onboarding assistido. Ensinamos você a navegar com segurança, transformando o complexo em algo simples.
+                Grandes oportunidades like Ethereum e Binance Coin começaram pequenas. A BODE segue esse rastro de visão, mas com um diferencial exclusivo: onboarding assistido. Ensinamos você a navegar com segurança, transformando o complexo em algo simples.
               </p>
 
               <h4 className="text-lg md:text-xl font-bold text-gold-500 mt-6 mb-3">
@@ -166,38 +165,6 @@ const Carousel: React.FC = () => {
                   className="w-full h-auto object-contain rounded-lg"
                 />
               </div>
-            </div>
-          </div>
-
-          {/* Terceira parte - imagem e texto */}
-          <div>
-            <img
-              src={imageDiv3}
-              alt="Imagem Investimento"
-              className="w-full h-auto object-contain rounded-lg"
-            />
-            <div className="text-left mt-6 space-y-4">
-              <h3 className="text-xl md:text-2xl font-bold text-white mt-6 mb-3">
-                Investidor SEED
-              </h3>
-
-              <h4 className="text-lg md:text-xl font-bold text-gold-500 mt-6 mb-3">
-                🌟 O Amanhã Começa com US$ 5.000
-              </h4>
-
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                Ao se tornar um Investidor Seed, você não está apenas comprando um token. Você está garantindo:
-              </p>
-
-              <ul className="list-disc list-inside text-gray-300 text-sm md:text-base space-y-2 ml-4 mt-3">
-                <li><strong className="text-white">Aporte:</strong> US$ 5.000.</li>
-                <li><strong className="text-white">Patrimônio:</strong> 100.000 tokens BODE.</li>
-                <li><strong className="text-white">Projeção (60 meses):</strong> Um valor estimado de US$ 1.200.000.</li>
-              </ul>
-
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed mt-4">
-                Enquanto os bancos te cobram para usar seu próprio dinheiro, a Bode Coin te convida a ser Parte do sistema. É o fim das taxas invisíveis e o começo da sua verdadeira liberdade financeira.
-              </p>
             </div>
           </div>
         </div>

@@ -69,7 +69,7 @@ const Pagamento: React.FC = () => {
           {/* Container Direito */}
           <div className="bg-dark-800 p-8 rounded-2xl border border-gold-500/20 min-h-[300px] flex flex-col items-center justify-center gap-6">
             <img
-              src="/solflare-card.png"
+              src="/gemini sem logo.png"
               alt="Solflare Card"
               className="max-w-full max-h-[675px] object-contain rounded-lg shadow-lg"
             />
