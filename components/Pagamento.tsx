@@ -111,13 +111,18 @@ const Pagamento: React.FC = () => {
 
               {/* Card 2: Como Comprar */}
               <div className="flex flex-col items-center gap-2 w-[120px] sm:w-[180px]">
-                <div className="bg-white p-2 sm:p-4 rounded-xl shadow-lg w-full aspect-[4/5] flex items-center justify-center overflow-hidden">
+                <a
+                  href="https://youtu.be/5XdCza0F_4A?si=jXHwH7QzKmhg3-mI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-2 sm:p-4 rounded-xl shadow-lg w-full aspect-[4/5] flex items-center justify-center overflow-hidden hover:opacity-80 transition-opacity"
+                >
                   <img
                     src="/card-comprar-video.png"
                     alt="Como Comprar BodeCoin"
                     className="w-full h-full object-contain"
                   />
-                </div>
+                </a>
               </div>
 
               {/* Card 3: ID Bodecoin */}
