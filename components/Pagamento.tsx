@@ -96,13 +96,13 @@ const Pagamento: React.FC = () => {
               {/* Card 1: Como Baixar */}
               <div className="flex flex-col items-center gap-2 w-[120px] sm:w-[180px]">
                 <a
-                  href="https://youtu.be/R7AYEo-G7yM?si=KHL1O8ow9K04CvlC"
+                  href="https://vt.tiktok.com/ZSaMMWyKw/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white p-2 sm:p-4 rounded-xl shadow-lg w-full aspect-[4/5] flex items-center justify-center overflow-hidden hover:opacity-80 transition-opacity"
                 >
                   <img
-                    src="/card-baixar-video.png"
+                    src="/WhatsApp Image 2026-01-21 at 16.24.28.jpeg"
                     alt="Como baixar sua carteira"
                     className="w-full h-full object-contain"
                   />
@@ -112,13 +112,13 @@ const Pagamento: React.FC = () => {
               {/* Card 2: Como Comprar */}
               <div className="flex flex-col items-center gap-2 w-[120px] sm:w-[180px]">
                 <a
-                  href="https://youtu.be/5XdCza0F_4A?si=jXHwH7QzKmhg3-mI"
+                  href="https://vt.tiktok.com/ZSaMhVYDm/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white p-2 sm:p-4 rounded-xl shadow-lg w-full aspect-[4/5] flex items-center justify-center overflow-hidden hover:opacity-80 transition-opacity"
                 >
                   <img
-                    src="/card-comprar-video.png"
+                    src="/WhatsApp Image 2026-01-21 at 16.24.28 (1).jpeg"
                     alt="Como Comprar BodeCoin"
                     className="w-full h-full object-contain"
                   />
