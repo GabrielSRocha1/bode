@@ -21,7 +21,7 @@ const About: React.FC = () => {
       <div className="max-w-[90%] xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center mb-10">
           <a
-            href="https://wa.link/cv1m27"
+            href="https://dexscreener.com/solana/gsf3ryndwyt6txgg1donwjvr1cdnirbdwaf8f8sdba5u"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-extrabold text-xl sm:text-2xl transition-all transform hover:scale-105 cursor-pointer"
