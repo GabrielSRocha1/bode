@@ -7,11 +7,11 @@ const Features: React.FC = () => {
 
   const handleScrollToPayment = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const target = document.getElementById('pagamento-imagens');
+    const target = document.getElementById('pagamento');
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
-      window.location.hash = '#pagamento-imagens';
+      window.location.hash = '#pagamento';
     }
   }, []);
 
@@ -63,9 +63,8 @@ const Features: React.FC = () => {
         {/* Botão Empresas Parceiras - Mobile Only (início da seção) */}
         <div className="sm:hidden flex justify-center mb-8">
           <a
-            href="https://parceiros.bodecoin.digital/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#pagamento"
+            onClick={handleScrollToPayment}
             className="bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-lg font-bold transition-all transform hover:scale-105 cursor-pointer text-base"
           >
             {t('nav.buyNow')}
@@ -94,9 +93,8 @@ const Features: React.FC = () => {
 
         <div className="mb-24 flex justify-center">
           <a
-            href="https://dexscreener.com/solana/gsf3ryndwyt6txgg1donwjvr1cdnirbdwaf8f8sdba5u"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#pagamento"
+            onClick={handleScrollToPayment}
             className="inline-block bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-extrabold text-xl sm:text-2xl transition-all transform hover:scale-105 cursor-pointer"
           >
             Comprar Agora

@@ -23,6 +23,14 @@ const Carousel: React.FC = () => {
     }
   ];
 
+  const handleScrollToPayment = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.getElementById('pagamento');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="py-16 bg-dark-900">
       <div className="max-w-[90%] xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,9 +178,8 @@ const Carousel: React.FC = () => {
         </div>
         <div className="text-center mt-12">
           <a
-            href="https://dexscreener.com/solana/gsf3ryndwyt6txgg1donwjvr1cdnirbdwaf8f8sdba5u"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#pagamento"
+            onClick={handleScrollToPayment}
             className="inline-block bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-extrabold text-xl sm:text-2xl transition-all transform hover:scale-105 cursor-pointer"
           >
             Comprar Agora

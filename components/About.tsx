@@ -6,11 +6,11 @@ const About: React.FC = () => {
 
   const handleScrollToPayment = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const target = document.getElementById('pagamento-imagens');
+    const target = document.getElementById('pagamento');
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
-      window.location.hash = '#pagamento-imagens';
+      window.location.hash = '#pagamento';
     }
   }, []);
 
@@ -21,9 +21,8 @@ const About: React.FC = () => {
       <div className="max-w-[90%] xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center mb-10">
           <a
-            href="https://dexscreener.com/solana/gsf3ryndwyt6txgg1donwjvr1cdnirbdwaf8f8sdba5u"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#pagamento"
+            onClick={handleScrollToPayment}
             className="inline-block bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-extrabold text-xl sm:text-2xl transition-all transform hover:scale-105 cursor-pointer"
           >
             Comprar Agora
@@ -58,6 +57,16 @@ const About: React.FC = () => {
               <p dangerouslySetInnerHTML={{ __html: t('about.text3') }} />
             </div>
           </div>
+        </div>
+        <div className="flex justify-center mt-16">
+          <a
+            href="https://dexscreener.com/solana/gsf3ryndwyt6txgg1donwjvr1cdnirbdwaf8f8sdba5u"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-xl font-extrabold text-lg sm:text-xl transition-all transform hover:scale-105 cursor-pointer flex items-center gap-2 shadow-lg shadow-green-500/20"
+          >
+            Acompanhe a BodeCoin na DexScreener
+          </a>
         </div>
       </div>
     </section>

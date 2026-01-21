@@ -21,11 +21,11 @@ const images = [
 const Gallery: React.FC = () => {
   const handleScrollToPayment = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const target = document.getElementById('pagamento-imagens');
+    const target = document.getElementById('pagamento');
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
-      window.location.hash = '#pagamento-imagens';
+      window.location.hash = '#pagamento';
     }
   }, []);
 
@@ -50,9 +50,8 @@ const Gallery: React.FC = () => {
 
       <div className="py-8 text-center">
         <a
-          href="https://dexscreener.com/solana/gsf3ryndwyt6txgg1donwjvr1cdnirbdwaf8f8sdba5u"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#pagamento"
+          onClick={handleScrollToPayment}
           className="inline-block bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-extrabold text-xl sm:text-2xl transition-all transform hover:scale-105 cursor-pointer"
         >
           Comprar Agora
