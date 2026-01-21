@@ -5,6 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/favicon (1).png" />
+  <link rel="apple-touch-icon" href="/favicon (1).png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#EAB308">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>BodeCoin | A Cripto do Asfalto</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link
@@ -43,6 +48,84 @@
       background-color: #050505;
       color: #e5e5e5;
       overflow-x: hidden;
+      margin: 0;
+    }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #050505;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
+    }
+
+    #preloader.loaded {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .loader-logo {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      animation: logo-entry 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      filter: drop-shadow(0 0 20px rgba(234, 179, 8, 0.3));
+    }
+
+    .loader-bar {
+      width: 200px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .loader-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, #EAB308, transparent);
+      animation: progress-move 2s infinite ease-in-out;
+    }
+
+    @keyframes logo-entry {
+      0% {
+        transform: scale(0.5) translateY(20px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes progress-move {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
     }
 
     .scrollbar-hide::-webkit-scrollbar {
@@ -98,13 +181,37 @@
   }
 }
 </script>
-  <link rel="stylesheet" href="/index.css">
 </head>
 
 <body>
+  <div id="preloader">
+    <div class="loader-content">
+      <img src="/favicon (1).png" alt="BodeCoin" class="loader-logo">
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
   <div id="root"></div>
+
   <script type="module" src="/index.tsx"></script>
 
+  <script>
+    window.addEventListener('load', function () {
+      const preloader = document.getElementById('preloader');
+
+      // Minimum duration to show the brand
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+
+        // Remove from DOM to prevent interaction issues
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 800);
+      }, 2000);
+    });
+  </script>
 </body>
 
 </html>
