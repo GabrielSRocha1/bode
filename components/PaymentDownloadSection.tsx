@@ -46,9 +46,12 @@ const PaymentDownloadSection: React.FC = () => {
           >
             <img src="/ID bodecoin.png" alt="Imagem 3 BodeCoin" className="h-24 md:h-32 w-auto object-contain" />
             {copied && (
-              <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gold-500 text-black text-xs font-bold px-2 py-1 rounded whitespace-nowrap">
-                Link copiado!
-              </span>
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 z-50">
+                <div className="bg-green-500 text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full shadow-2xl whitespace-nowrap animate-bounce border-2 border-white">
+                  ✓ Link copiado!
+                </div>
+                <div className="w-2 h-2 bg-green-500 rotate-45 absolute -bottom-1 left-1/2 transform -translate-x-1/2 border-r-2 border-b-2 border-white"></div>
+              </div>
             )}
           </button>
           <div className="flex flex-col items-center">
