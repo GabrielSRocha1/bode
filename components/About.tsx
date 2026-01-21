@@ -58,12 +58,12 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-16">
+        <div className="flex justify-center mt-16 w-full">
           <a
             href="https://dexscreener.com/solana/gsf3ryndwyt6txgg1donwjvr1cdnirbdwaf8f8sdba5u"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-xl font-extrabold text-lg sm:text-xl transition-all transform hover:scale-105 cursor-pointer flex items-center gap-2 shadow-lg shadow-green-500/20"
+            className="flex items-center justify-center text-center bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-xl font-extrabold text-lg sm:text-xl transition-all transform hover:scale-105 cursor-pointer gap-2 shadow-lg shadow-green-500/20"
           >
             Acompanhe a BodeCoin na DexScreener
           </a>
